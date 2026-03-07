@@ -1,0 +1,145 @@
+MIT License
+
+Copyright (c) 2026 Isaac Maciel
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-------------------------------------------------------------------------------
+THIRD-PARTY DATA LICENSES AND ATTRIBUTION NOTICES
+-------------------------------------------------------------------------------
+
+This repository contains code, notebooks, and derived outputs that depend on
+or were produced using the following third-party datasets and resources. The
+MIT License above applies exclusively to the original source code, notebooks,
+documentation, and generated synthetic/derived artifacts authored by Isaac
+Maciel. It does NOT extend to, override, or relicense any third-party dataset
+listed below. Users must independently comply with the terms of each dataset's
+own license before accessing, downloading, or reproducing any data-dependent
+results.
+
+-------------------------------------------------------------------------------
+1. PTB-XL: A Large Publicly Available Electrocardiography Dataset
+-------------------------------------------------------------------------------
+
+  Source:     PhysioNet / Computing in Cardiology
+  Version:    1.0.3
+  URL:        https://physionet.org/content/ptb-xl/1.0.3/
+  License:    Creative Commons Attribution 4.0 International (CC BY 4.0)
+              https://creativecommons.org/licenses/by/4.0/
+
+  Citation (required by CC BY 4.0):
+    Wagner, P., Strodthoff, N., Bousseljot, R., Samek, W., & Schaeffter, T.
+    (2022). PTB-XL, a large publicly available electrocardiography dataset
+    (version 1.0.3). PhysioNet.
+    https://doi.org/10.13026/kfzx-aw45
+
+    Wagner, P., Strodthoff, N., Bousseljot, R.-D., Kreiseler, D.,
+    Lunze, F. I., Samek, W., & Schaeffter, T. (2020). PTB-XL, a large
+    publicly available electrocardiography dataset. Scientific Data, 7, 154.
+    https://doi.org/10.1038/s41597-020-0495-6
+
+    Goldberger, A., Amaral, L., Glass, L., Hausdorff, J., Ivanov, P. C.,
+    Mark, R., ... & Stanley, H. E. (2000). PhysioBank, PhysioToolkit, and
+    PhysioNet: Components of a new research resource for complex physiologic
+    signals. Circulation, 101(23), e215-e220.
+
+  Usage in this project:
+    PTB-XL raw signal files (WFDB format, 100 Hz and 500 Hz) and the
+    accompanying metadata CSV files (ptbxl_database.csv, scp_statements.csv)
+    are used exclusively for academic research and educational purposes at
+    FIAP (Faculdade de Informatica e Administracao Paulista), Sao Paulo,
+    2026. Raw data files are tracked by DVC and are NOT stored in this Git
+    repository. They reside exclusively in a local DVC remote on the
+    developer's private machine and are never published to any public
+    storage. Processed derivatives (engineered feature CSVs, spectrograms,
+    tensor arrays) are similarly excluded from public distribution via
+    .gitignore and .dvcignore.
+
+-------------------------------------------------------------------------------
+2. MIMIC-IV-ECG: Diagnostic Electrocardiogram Matched Subset
+-------------------------------------------------------------------------------
+
+  Source:     PhysioNet / Beth Israel Deaconess Medical Center
+  URL:        https://physionet.org/content/mimic-iv-ecg/
+  License:    PhysioNet Credentialed Health Data License 1.5.0
+              https://physionet.org/content/mimiciv/view-license/
+
+  IMPORTANT - CREDENTIALED ACCESS REQUIRED:
+    MIMIC-IV-ECG is a restricted-access dataset. Access requires completion
+    of a recognised human subjects research training course (e.g., CITI
+    Program) and approval of a data use agreement through PhysioNet.
+    This dataset is NOT publicly downloadable without credentials.
+
+  Usage in this project:
+    MIMIC-IV-ECG is listed as a planned Phase 2+ data source for cross-
+    dataset generalisation experiments. As of Phase 1, NO MIMIC-IV-ECG
+    data has been downloaded, processed, or committed to this repository
+    in any form. The directory data/raw/mimic-iv-ecg/ contains only a
+    .gitkeep placeholder. Any future use will strictly follow the terms
+    of the PhysioNet Credentialed Health Data License and will never be
+    pushed to any public repository or remote storage.
+
+-------------------------------------------------------------------------------
+3. Clinical NLP Documents (SBC / SUS Guidelines and ANVISA Prescribing Info)
+-------------------------------------------------------------------------------
+
+  This project processes a corpus of publicly available Portuguese-language
+  clinical guidelines and drug prescribing information sourced from:
+
+  - Sociedade Brasileira de Cardiologia (SBC) - Brazilian Society of
+    Cardiology. Clinical guidelines published under open-access terms for
+    educational and research use.
+    URL: https://www.cardiol.br/
+
+  - Sistema Unico de Saude (SUS) / Ministerio da Saude - Brazilian national
+    health system. Clinical protocols and therapeutic guidelines published
+    as public domain government documents.
+    URL: https://www.gov.br/saude/
+
+  - ANVISA (Agencia Nacional de Vigilancia Sanitaria) - Brazilian national
+    health regulatory agency. Drug prescribing information (bulas) published
+    as public regulatory documents.
+    URL: https://www.gov.br/anvisa/
+
+  Usage in this project:
+    These documents are used solely for academic NLP research (text pruning,
+    TF-IDF vectorisation, and construction of a clinical edge-trigger lookup
+    table). Raw PDF files are tracked by DVC and are not distributed via this
+    Git repository. The derived edge_trigger_lookup.json (6.41 KB) contains
+    only aggregated statistical weights with no verbatim reproduction of
+    source text.
+
+-------------------------------------------------------------------------------
+GENERAL DATA ETHICS STATEMENT
+-------------------------------------------------------------------------------
+
+All datasets used in this project were accessed and used in accordance with
+their respective license terms. No patient-identifiable information has been
+extracted, stored, or published at any stage of this project. The PTB-XL
+dataset is fully de-identified per PhysioNet standards. Processing pipelines
+were designed with data minimisation principles: only the features strictly
+necessary for the research questions were computed and retained.
+
+This project is an academic prototype developed as part of the FIAP
+postgraduate AI programme (2026). It is NOT a certified medical device, has
+NOT undergone clinical trials, and is NOT intended for diagnostic use in
+any clinical setting. Results and metrics reported in this repository are
+research outputs for educational evaluation purposes only.
+
+-------------------------------------------------------------------------------
