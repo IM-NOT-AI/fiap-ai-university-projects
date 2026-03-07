@@ -1,0 +1,261 @@
+# =============================================================================
+# .gitignore - last_year/
+# FIAP AI - 2 Ano Letivo (2026) - Projeto CardioIA
+#
+# Legenda de categorias usadas nos comentarios:
+#   [RESTRICTED] - nunca versionado em NENHUM sistema (nem Git, nem DVC remote)
+#   [DVC]        - excluido do Git, rastreado via DVC (ponteiro .dvc vai ao Git)
+#   [GIT OK]     - versionado diretamente no Git (pequeno, legivel, ou gerado)
+# =============================================================================
+
+
+# =============================================================================
+# [RESTRICTED] MIMIC-IV ECG
+# -----------------------------------------------------------------------------
+# Dataset clinico de UTI do MIT/PhysioNet. Acesso restrito: requer conclusao
+# do curso CITI (documentado em docs/citi/), credencial PhysioNet e aprovacao
+# do supervisor institucional da FIAP (processo documentado em
+# docs/data/mimic-iv-ecg/mimic-iv-ecg_data_source.md).
+#
+# Estrutura local apos download:
+#   data/raw/mimic-iv-ecg/1.0/
+#     ├── files/p1000/ ... p1002/ ... (registros WFDB por paciente)
+#     ├── index.html
+#     ├── machine_measurements.csv
+#     ├── record_list.csv
+#     ├── waveform_note_links.csv
+#     └── RECORDS, SHA256SUMS.txt, LICENSE.txt
+#
+# NUNCA commitar em Git ou DVC remote publico/privado.
+# Os .gitkeep sao os unicos arquivos rastreados nestas pastas.
+# =============================================================================
+challenge/ai_cardiology/data/raw/mimic-iv-ecg/1.0/
+challenge/ai_cardiology/data/processed/mimic-iv-ecg/**
+!challenge/ai_cardiology/data/raw/mimic-iv-ecg/.gitkeep
+!challenge/ai_cardiology/data/processed/mimic-iv-ecg/.gitkeep
+
+
+# =============================================================================
+# [DVC] PTB-XL - PhysioNet PTB-XL v1.0.3
+# -----------------------------------------------------------------------------
+# Primeiro dataset escolhido para o projeto (acesso garantido, sem restricao).
+# 21.799 ECGs de 12 derivacoes, gravados a 100Hz e 500Hz em formato WFDB.
+# Total: ~500MB de binarios (.dat/.hea) + metadados (~6MB em CSV).
+#
+# Estrutura:
+#   data/raw/ptbxl/
+#     ├── records100/00000/ ... 04000/  <- sinais WFDB a 100Hz
+#     ├── records500/00000/ ... 04000/  <- sinais WFDB a 500Hz
+#     ├── ptbxl_database.csv            <- rotulos diagnosticos e metadados (~6MB)
+#     ├── scp_statements.csv            <- dicionario dos 71 codigos SCP-ECG
+#     ├── example_physionet.py          <- script de exemplo PhysioNet
+#     ├── ptbxl_v102_changelog.txt      <- historico de versoes
+#     ├── ptbxl_v103_changelog.txt
+#     ├── RECORDS                       <- lista de todos os registros
+#     ├── LICENSE.txt
+#     └── SHA256SUMS.txt
+#
+# Gerenciado via: dvc add challenge/ai_cardiology/data/raw/ptbxl/
+# Ponteiro Git: challenge/ai_cardiology/data/raw/ptbxl.dvc  <- vai ao Git
+# Reproduzir: dvc pull challenge/ai_cardiology/data/raw/ptbxl.dvc
+# =============================================================================
+challenge/ai_cardiology/data/raw/ptbxl/
+
+
+# =============================================================================
+# [DVC] NLP Corpus - PDFs brutos (diretrizes, bulas, relatos de caso)
+# -----------------------------------------------------------------------------
+# 27 documentos publicos (~41MB total) curados para a base de conhecimento
+# clinico do CardioIA. Fontes: SBC, SUS, PubMed (cardiologia brasileira).
+# Categorias:
+#   - Diretrizes clinicas (fibrilacao atrial, angina, ressuscitacao, IC)
+#   - Bulas profissionais (alteplase, amiodarona, clopidogrel, enoxaparina,
+#     noradrenalina)
+#   - Relatos de caso (Takotsubo, miocardite COVID-19, Chagas, IAMCSST, etc.)
+#   - Revisoes sistematicas (ceramidas, miRNAs, GDF-15, sindrome cardiorrenal)
+#
+# EXCECAO: README.md dentro desta pasta -> [GIT OK] (legivel, sem binario)
+#
+# Gerenciado via: dvc add challenge/ai_cardiology/data/raw/nlp/
+# Ponteiro Git: challenge/ai_cardiology/data/raw/nlp.dvc  <- vai ao Git
+# =============================================================================
+challenge/ai_cardiology/data/raw/nlp/*.pdf
+!challenge/ai_cardiology/data/raw/nlp/README.md
+
+
+# =============================================================================
+# [DVC] Imagens ECG processadas - saida do notebook ptbxl_signal_vision_eda
+# -----------------------------------------------------------------------------
+# Geradas pelo NB3 (ptbxl_signal_vision_eda.ipynb) a partir dos sinais brutos
+# do PTB-XL. Dois formatos:
+#
+#   ecg_12_lead_grids/
+#     └── grid_12_leads_paciente_XXXX.png  <- layout clinico 12 derivacoes
+#                                             (25mm/s, 10mm/mV), uma imagem
+#                                             por registro PTB-XL
+#   spectrograms/
+#     └── espectrograma_paciente_XXXX.png  <- espectrograma STFT da derivacao II
+#                                             para abordagens de visao computacional
+#
+# Produzem entrada visual para CNNs sem necessitar do wfdb em inferencia.
+# Volume: >1GB - inviavel para Git.
+# Gerenciado via: dvc add challenge/ai_cardiology/data/processed/ptbxl/images/
+# =============================================================================
+challenge/ai_cardiology/data/processed/ptbxl/images/ecg_12_lead_grids/
+challenge/ai_cardiology/data/processed/ptbxl/images/spectrograms/
+
+
+# =============================================================================
+# [DVC] Tensores numpy - splits de treino/validacao/teste
+# -----------------------------------------------------------------------------
+# Gerados pelo NB3 (ptbxl_signal_vision_eda.ipynb).
+# Arrays prontos para alimentar os modelos de ML/DL:
+#
+#   X_img_train.npy, X_img_val.npy, X_img_test.npy  <- espectrogramas 224x224 (CNN input)
+#   X_tab_train.npy, X_tab_val.npy, X_tab_test.npy  <- features tabulares multimodais
+#   Y_train.npy,     Y_val.npy,     Y_test.npy       <- labels Multi-Label (6 superclasses)
+#
+# Total: ~1.3GB - excluido do Git.
+# Gerenciado via: dvc add challenge/ai_cardiology/data/processed/ptbxl/tensors/
+# =============================================================================
+challenge/ai_cardiology/data/processed/ptbxl/tensors/
+
+
+# =============================================================================
+# [DVC] PDFs podados - saida do notebook nlp_data_pruning
+# -----------------------------------------------------------------------------
+# Versoes processadas dos PDFs brutos do corpus NLP (~20MB).
+# Gerados pelo NB4 (nlp_data_pruning.ipynb): remocao de cabecalhos, rodapes,
+# numeracao e ruido bibliografico. Mantem o conteudo clinico puro.
+# O texto extraido em parsed_txt/ e o lookup em cleaned/ -> [GIT OK]
+# (plain text, legiveis, abaixo de 1MB cada).
+# Gerenciado via: dvc add challenge/ai_cardiology/data/processed/nlp/pruned_pdfs/
+# =============================================================================
+challenge/ai_cardiology/data/processed/nlp/pruned_pdfs/
+
+
+# =============================================================================
+# [GRANDE] Simulacao Holter IoT - 468MB, dado sintetico reproduzivel
+# -----------------------------------------------------------------------------
+# Gerado pelo NB2 (holter_iot_data_simulation.ipynb): 86.400 epocas (24h).
+# Nao vai ao Git (tamanho) nem ao cache DVC (cache: false = reproduzivel).
+# Restaurar: dvc repro iot_simulation
+# =============================================================================
+challenge/ai_cardiology/data/processed/simulations/
+
+
+# =============================================================================
+# PYTHON - artefatos de build, runtime e ambiente virtual
+# =============================================================================
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+.env
+.env.*
+pip-log.txt
+pip-delete-this-directory.txt
+
+
+# =============================================================================
+# JUPYTER - checkpoints automaticos
+# -----------------------------------------------------------------------------
+# Os notebooks .ipynb sao o storytelling do projeto -> [GIT OK]
+# Apenas os checkpoints gerados automaticamente pelo Jupyter sao ignorados
+# =============================================================================
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+
+# =============================================================================
+# LOGS E ARQUIVOS TEMPORARIOS
+# =============================================================================
+*.log
+*.tmp
+*.temp
+*.bak
+*.cache
+*.swp
+*.swo
+*~
+
+
+# =============================================================================
+# SISTEMA OPERACIONAL - Windows 11 (maquina principal de desenvolvimento)
+# =============================================================================
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*
+
+
+# =============================================================================
+# IDE / EDITORES - configuracoes locais, nao compartilhaveis
+# =============================================================================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+
+# =============================================================================
+# PDFs grandes em docs/ — excedem o limite de 100MB do GitHub
+# -----------------------------------------------------------------------------
+# O artigo MIMIC-IV (186MB) e outros PDFs de referencia nao vao ao Git.
+# Apenas os PDFs podados do corpus NLP (pruned_pdfs/) sao rastreados pelo DVC.
+# =============================================================================
+challenge/ai_cardiology/docs/data/**/*.pdf
+challenge/ai_cardiology/docs/data/**/*.PDF
+
+
+# =============================================================================
+# [DVC] PPG-DaLiA - dataset bruto wearable (avaliado, nao utilizado na Fase 1)
+# -----------------------------------------------------------------------------
+# Dataset PPG-DaLiA (UCI / Attila Reiss et al.): 15 sujeitos, sinais PPG+ACC
+# via Empatica E4 e RespiBAN. Avaliado como candidato para sinais wearable
+# complementares ao ECG; nao incluido na Fase 1 por exigir hardware fisico
+# adicional (Empatica E4) e cronograma incompativel com os entregaveis.
+# Arquivos brutos: .pkl (numpy arrays), .h5 (HDF5), .csv por sujeito S1-S15.
+# Gerenciar via: dvc add challenge/ai_cardiology/data/raw/ppg_dalia/
+# =============================================================================
+challenge/ai_cardiology/data/raw/ppg_dalia/
+challenge/ai_cardiology/data/processed/ppg_dalia/**
+!challenge/ai_cardiology/data/processed/ppg_dalia/.gitkeep
+
+
+# =============================================================================
+# NOTA: arquivos que NAO sao ignorados (rastreados explicitamente pelo Git)
+# =============================================================================
+# challenge/ai_cardiology/data/processed/ptbxl/features/*.csv
+#   -> ptbxl_engineered_features.csv (~2MB) e ptbxl_gateway_fallback.csv
+#      Derivados do EDA, pequenos e legiveis - storytelling do projeto
+#
+# challenge/ai_cardiology/data/processed/simulations/holter_iot_data_simulation.csv
+#   -> 468MB - BLOQUEADO do Git. Dado sintetico reproduzivel via `dvc repro iot_simulation`.
+#      Nao vai ao Git nem ao cache DVC (cache: false no dvc.yaml = sem armazenamento duplo).
+#
+# challenge/ai_cardiology/data/processed/nlp/parsed_txt/*.txt
+#   -> Texto puro extraido dos PDFs (<1MB cada) - legivel, diffavel, Git ideal
+#
+# challenge/ai_cardiology/data/processed/nlp/cleaned/edge_trigger_lookup.json
+#   -> Output do NB5 (nlp_data_engineer): lexico de gatilho clinico (6,41 KB)
+#      Base do agente inteligente do CardioIA - JSON pequeno, versionavel
+#
+# challenge/ai_cardiology/data/raw/nlp/README.md
+#   -> Documentacao do corpus NLP - excecao explicita acima
+#
+# Todos os .ipynb, .py, .md, docs/assets/**
+#   -> Codigo, documentacao e assets visuais do README/CITI/hardware
