@@ -1,0 +1,52 @@
+# =============================================================================
+# requirements-gpu.txt = CardioIA · FIAP 2026
+# Ambiente: Python 3.10 · GPU NVIDIA (CUDA 11.x / cuDNN 8.x)
+#
+# INSTALAR:
+#   pip install -r requirements-gpu.txt
+#
+# CONTEXTO:
+#   tensorflow-gpu 2.10.0 é o último release com suporte nativo a GPU no
+#   Windows sem WSL2. Exige CUDA 11.2 e cuDNN 8.1 instalados no sistema.
+#   Use este arquivo somente com Python 3.10 - TF 2.10 não suporta 3.11+.
+#   Versões pinadas do pip freeze do venv .fiap_venv_py310.
+#
+# REFERÊNCIA CUDA:
+#   https://www.tensorflow.org/install/pip#windows-native
+#   CUDA 11.2  →  https://developer.nvidia.com/cuda-11.2.0-download-archive
+#   cuDNN 8.1  →  https://developer.nvidia.com/rdp/cudnn-archive
+# =============================================================================
+
+# --- Data Science Core ---
+# numpy DEVE ser 1.x — TF-GPU 2.10 usa a C API do NumPy 1.x (bfloat16).
+# NumPy 2.x quebra o import com TypeError em dtypes.py.
+numpy==1.26.4
+pandas==2.3.3
+matplotlib==3.10.8
+seaborn==0.13.2
+scikit-learn==1.7.2
+scipy==1.15.3
+scikit-image==0.25.2
+
+# --- ECG / Sinais Biomédicos (NB3 - ptbxl_signal_vision_eda) ---
+wfdb==4.3.1
+
+# --- NLP / PDF (NB4 - nlp_data_pruning, NB5 - nlp_data_engineer) ---
+PyPDF2==3.0.1
+PyMuPDF==1.27.1
+nltk==3.9.2
+
+# --- Deep Learning - GPU NVIDIA (NB3 - ptbxl_signal_vision_eda) ---
+# ATENÇÃO: instalar CUDA 11.2 + cuDNN 8.1 ANTES deste pip install
+tensorflow-gpu==2.10.0
+keras==2.10.0
+Keras-Preprocessing==1.1.2
+tensorboard==2.10.1
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.1
+tensorflow-estimator==2.10.0
+tensorflow-io-gcs-filesystem==0.31.0
+
+# --- Jupyter / Reprodutibilidade ---
+ipykernel==7.2.0
+watermark==2.6.0
