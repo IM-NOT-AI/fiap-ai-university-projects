@@ -1,0 +1,133 @@
+# =============================================================================
+# .dvcignore - last_year/
+# FIAP AI - 2 Ano Letivo (2026) - Projeto CardioIA
+#
+# Instrui o DVC quais arquivos NAO devem ser hasheados ao varrer diretorios.
+# Funciona como .gitignore, mas para o motor de cache interno do DVC.
+#
+# QUANDO ISSO IMPORTA:
+#   Ao executar `dvc add <pasta>/`, o DVC percorre recursivamente a pasta
+#   e calcula o hash de cada arquivo para o cache. Arquivos listados aqui
+#   sao excluidos desse hash, nao entram no cache e nao aparecem no .dvc.
+#
+# DIFERENCA do .gitignore:
+#   .gitignore - controla o que o Git rastreia (commits, staging)
+#   .dvcignore - controla o que o DVC hasheia (cache, run, repro)
+#   Um arquivo pode estar em .gitignore (excluido do Git) e NAO estar
+#   no .dvcignore (incluso no cache DVC). Exemplos: .npy, .dat, .hea
+# =============================================================================
+
+
+# =============================================================================
+# PLACEHOLDERS DE ESTRUTURA
+# -----------------------------------------------------------------------------
+# Arquivos .gitkeep preservam pastas vazias no Git.
+# Nao representam dados - o DVC nao deve hashea-los nem cachea-los.
+# Aparecem em: data/processed/ppg_dalia/, data/processed/mimic-iv-ecg/,
+#              models/, src/
+# =============================================================================
+.gitkeep
+**/.gitkeep
+
+
+# =============================================================================
+# DOCUMENTACAO DENTRO DE PASTAS DE DADOS
+# -----------------------------------------------------------------------------
+# Arquivos de texto/markdown colocados dentro de pastas de dados para
+# documentar fonte, licenca ou procedimento. Sao rastreados pelo Git -
+# o DVC nao deve inclui-los no hash da pasta, pois alteracoes de
+# documentacao nao devem invalidar o cache de dados.
+#
+# Presentes no projeto:
+#   data/raw/nlp/README.md            <- fonte e categorias do corpus NLP
+#   data/raw/ptbxl/LICENSE.txt        <- licenca Creative Commons PTB-XL
+#   data/raw/ptbxl/ptbxl_v*.txt      <- changelogs de versao PTB-XL
+# =============================================================================
+README.md
+**/README.md
+LICENSE.txt
+**/LICENSE.txt
+references.txt
+**/references.txt
+CHANGELOG.md
+**/CHANGELOG.md
+
+
+# =============================================================================
+# MIMIC-IV ECG - protecao redundante
+# -----------------------------------------------------------------------------
+# Mesmo que o DVC varra uma pasta-pai que inclua o caminho do MIMIC,
+# essa regra garante que os dados nunca sejam hasheados, cacheados ou
+# enviados a qualquer DVC remote, por nenhuma operacao.
+#
+# Dados em: data/raw/mimic-iv-ecg/1.0/files/p{1000..1002}/
+# Registros WFDB de pacientes de UTI - dado clinico sensivel, acesso
+# restrito via PhysioNet + credencial CITI.
+# =============================================================================
+**/mimic-iv-ecg/1.0/**
+
+
+# =============================================================================
+# ARTEFATOS PYTHON
+# -----------------------------------------------------------------------------
+# Caches de bytecode e artefatos de build que podem aparecer dentro de
+# pastas de dados quando scripts de processamento sao executados com cwd
+# apontando para essas pastas. Excluidos para manter hashes deterministicos.
+# =============================================================================
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+
+# =============================================================================
+# JUPYTER - checkpoints automaticos
+# -----------------------------------------------------------------------------
+# O Jupyter cria .ipynb_checkpoints/ automaticamente na pasta de trabalho.
+# Se um notebook for executado com cwd dentro de uma pasta rastreada pelo
+# DVC, esses checkpoints podem contaminar o hash do diretorio.
+# =============================================================================
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+
+# =============================================================================
+# SISTEMA OPERACIONAL
+# -----------------------------------------------------------------------------
+# Artefatos do Windows (Thumbs.db, desktop.ini) e macOS (.DS_Store, ._*)
+# criados automaticamente pelo sistema. Invalidariam hashes de forma nao
+# deterministica entre plataformas se entrassem no cache DVC.
+# =============================================================================
+.DS_Store
+**/.DS_Store
+._*
+Thumbs.db
+**/Thumbs.db
+desktop.ini
+**/desktop.ini
+$RECYCLE.BIN/
+
+
+# =============================================================================
+# LOGS E TEMPORARIOS
+# -----------------------------------------------------------------------------
+# Arquivos de log gerados por scripts de processamento (ex: avisos do wfdb
+# ao ler registros, logs de conversao de PDF) e temporarios/backups que
+# podem aparecer em pastas de dados durante a execucao dos notebooks.
+# =============================================================================
+*.log
+*.tmp
+*.temp
+*.bak
+
+
+# =============================================================================
+# METADADOS INTERNOS DO DVC
+# -----------------------------------------------------------------------------
+# O DVC ja ignora .dvc/ automaticamente por design, mas declaramos
+# explicitamente para garantir comportamento correto com dvc init --subdir
+# dentro de challenge/ai_cardiology/.
+# =============================================================================
+.dvc/
+**/.dvc/
