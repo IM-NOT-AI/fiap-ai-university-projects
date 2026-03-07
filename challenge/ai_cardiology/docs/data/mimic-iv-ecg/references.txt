@@ -1,0 +1,5 @@
+https://slideslive.com/embed/presentation/38931965
+
+https://physionet.org/content/mimic-iv-ecg/1.0/
+
+https://github.com/BrahimFakri/Patient-Health-Data-Analysis-And-Feature-Extraction-For-Machine-Learning?tab=readme-ov-file
