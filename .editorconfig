@@ -1,0 +1,185 @@
+# =============================================================================
+# .editorconfig - CardioIA · FIAP 2026
+# Especificacao EditorConfig (https://editorconfig.org)
+#
+# Garante consistencia de formatacao entre editores, sistemas operacionais
+# e colaboradores, independente das configuracoes locais de cada IDE.
+# Suportado nativamente por: VSCode, PyCharm, Vim, Neovim, Emacs, Sublime.
+#
+# CONTEXTO DO PROJETO:
+#   - Desenvolvimento primario: Windows 11 (VSCode) - line endings CRLF nativos
+#   - Repositorio GitHub: servidor Linux - espera LF
+#   - Arquivos Python e notebooks devem usar LF para compatibilidade maxima
+#   - Documentacao .md contem texto em portugues com acentuacao - UTF-8 obrigatorio
+#   - Notebooks .ipynb sao JSON  indentacao de 1 space e sem trailing whitespace
+#     evita diffs ruidosos no Git ao re-executar celulas
+#
+# PRIORIDADE DE REGRAS:
+#   EditorConfig aplica regras do mais especifico para o mais geral.
+#   Secoes mais abaixo sobrescrevem a secao [*] quando o glob e mais especifico.
+# =============================================================================
+
+root = true
+
+
+# =============================================================================
+# PADRAO GLOBAL  aplica a todos os arquivos nao cobertos por secoes especificas
+# =============================================================================
+[*]
+
+# UTF-8 sem BOM (Byte Order Mark).
+# BOM causa problemas em scripts Python, parsers JSON e terminais Linux.
+# O VS Code no Windows tende a adicionar BOM em arquivos novos  esta config previne.
+charset = utf-8
+
+# LF (Unix) como padrao universal.
+# Git converte para CRLF no checkout no Windows se core.autocrlf=true,
+# mas o arquivo no repositorio permanece com LF  comportamento correto.
+end_of_line = lf
+
+# Remover espacos em branco no fim de cada linha.
+# Evita diffs ruidosos causados por espacos invisveis deixados pelo editor.
+trim_trailing_whitespace = true
+
+# Garantir que o arquivo termine com uma linha em branco (newline final).
+# Requisito de POSIX; evita warnings de `git diff` e ferramentas de linting.
+insert_final_newline = true
+
+# Indentacao com espacos (nao tabs).
+# Python PEP 8 exige espacos. Tabs causam IndentationError ao misturar com espacos.
+indent_style = space
+
+# 4 espacos: padrao PEP 8 para Python e convencao de legibilidade para Markdown.
+indent_size = 4
+
+
+# =============================================================================
+# PYTHON - .py e .pyi
+# =============================================================================
+[*.{py,pyi}]
+
+# PEP 8 define 4 espacos como indentacao padrao para Python.
+indent_size = 4
+
+# Comprimento maximo de linha recomendado pelo PEP 8 e aceito pelo Black.
+# O EditorConfig nao aplica isso diretamente, mas serve como referencia
+# para linters configurados separadamente (flake8, pylint, ruff).
+# max_line_length = 88  (Black default - configurar no pyproject.toml se necessario)
+
+
+# =============================================================================
+# JUPYTER NOTEBOOKS - .ipynb
+# =============================================================================
+[*.ipynb]
+
+# Notebooks sao arquivos JSON. Indentacao de 1 espaco e o padrao que o
+# Jupyter salva internamente - manter consistente evita diffs enormes no Git
+# quando o Jupyter reformata o arquivo ao re-salvar com indentacao diferente.
+indent_size = 1
+
+# Nao inserir newline final em JSON - alguns parsers sao sensiveis a isso.
+insert_final_newline = false
+
+# Nao remover trailing whitespace em notebooks:
+# strings dentro de celulas Markdown podem ter espacos intencionais.
+trim_trailing_whitespace = false
+
+
+# =============================================================================
+# MARKDOWN - README, docs, structure, idea
+# =============================================================================
+[*.md]
+
+# Markdown permite trailing spaces como sintaxe de quebra de linha forcada (2 espacos).
+# Desabilitar trim para nao quebrar formatacao intencional.
+trim_trailing_whitespace = false
+
+# Manter newline final para compatibilidade com GitHub e renderers de Markdown.
+insert_final_newline = true
+
+# 2 espacos para listas aninhadas e tabelas - mais compacto e legivel em docs.
+indent_size = 2
+
+
+# =============================================================================
+# TOML - pyproject.toml, configuracoes de ferramentas
+# =============================================================================
+[*.toml]
+
+indent_size = 4
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+
+# =============================================================================
+# YAML - dvc.yaml, dvc.lock, configs de CI/CD futuros
+# =============================================================================
+[*.{yml,yaml}]
+
+# YAML e sensivel a indentacao; 2 espacos e o padrao amplamente adotado
+# (Ansible, GitHub Actions, Docker Compose, DVC pipeline definitions).
+indent_size = 2
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+
+# =============================================================================
+# JSON - edge_trigger_lookup.json, configs de notebook e extensoes
+# =============================================================================
+[*.json]
+
+# 2 espacos: padrao do Node.js ecosystem e do proprio Jupyter para configs.
+# Excecao: .ipynb usa indent_size=1 (secao acima sobrescreve esta).
+indent_size = 2
+trim_trailing_whitespace = true
+
+# JSON nao requer newline final, mas mante-la facilita diffs e `cat` no terminal.
+insert_final_newline = true
+
+
+# =============================================================================
+# SHELL SCRIPTS - utilitarios e scripts de automacao
+# =============================================================================
+[*.sh]
+
+indent_size = 2
+
+# Scripts shell devem ter LF obrigatoriamente - CRLF quebra o shebang no Linux.
+end_of_line = lf
+
+
+# =============================================================================
+# GITIGNORE, DVCIGNORE, EDITORCONFIG, PYTHON-VERSION
+# =============================================================================
+[{.gitignore,.dvcignore,.editorconfig,.python-version}]
+
+indent_size = 4
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+
+# =============================================================================
+# CSV - artefatos leves versionados no Git
+# (ptbxl_engineered_features.csv, ptbxl_gateway_fallback.csv,
+#  holter_iot_data_simulation.csv)
+# =============================================================================
+[*.csv]
+
+# CSVs nao tem indentacao - indent_size irrelevante, mas declarado por completeza.
+indent_size = 4
+
+# Nao remover trailing whitespace: valores de campos CSV podem ter espacos
+# intencionais que fazem parte do dado (ex: nomes de medicamentos com espacos).
+trim_trailing_whitespace = false
+
+insert_final_newline = true
+
+
+# =============================================================================
+# REQUIREMENTS - pip dependency files
+# =============================================================================
+[requirements*.txt]
+
+indent_size = 4
+trim_trailing_whitespace = true
+insert_final_newline = true
