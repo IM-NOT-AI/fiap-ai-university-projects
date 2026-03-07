@@ -1,0 +1,38 @@
+# =============================================================================
+# requirements.txt - CardioIA · FIAP 2026
+# Ambiente: Python 3.12 · CPU-only (sem CUDA)
+#
+# INSTALAR:
+#   pip install -r requirements.txt
+#
+# CONTEXTO:
+#   Ambiente padrão para desenvolvimento e execução dos notebooks em máquinas
+#   sem GPU NVIDIA ou com Python 3.12+. Usa tensorflow 2.20 (Keras 3.x).
+#   Versões pinadas do pip freeze do venv .fiap_venv_py312.
+# =============================================================================
+
+# --- Data Science Core ---
+numpy==2.4.2
+pandas==3.0.0
+matplotlib==3.10.8
+seaborn==0.13.2
+scikit-learn==1.8.0
+scipy==1.17.0
+scikit-image==0.26.0
+
+# --- ECG / Sinais Biomédicos (NB3 - ptbxl_signal_vision_eda) ---
+wfdb==4.3.1
+
+# --- NLP / PDF (NB4 - nlp_data_pruning, NB5 - nlp_data_engineer) ---
+PyPDF2==3.0.1
+PyMuPDF==1.27.1
+nltk==3.9.2
+
+# --- Deep Learning - CPU (NB3 - ptbxl_signal_vision_eda) ---
+tensorflow==2.20.0
+keras==3.13.2
+tensorboard==2.20.0
+
+# --- Jupyter / Reprodutibilidade ---
+ipykernel==7.2.0
+watermark==2.6.0
