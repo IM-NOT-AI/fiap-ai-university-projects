@@ -1,0 +1,55 @@
+# =============================================================================
+# .python-version - CardioIA · FIAP 2026
+# Lido automaticamente por pyenv / pyenv-win para selecionar o interpretador
+# Python ativo no diretorio do projeto.
+#
+# VERSAO PADRAO: 3.12.9 (ambiente CPU - EDA, NLP, pre-processamento)
+# Alternar para GPU: `pyenv local 3.10.14` antes de ativar o venv de treino.
+#
+# -----------------------------------------------------------------------------
+# POR QUE DOIS AMBIENTES? (detalhado em pyproject.toml)
+#
+#   CPU - Python 3.12.9                pip install -e ".[cpu]"
+#   - TensorFlow >= 2.20.0 (Keras 3.x), sem CUDA
+#   - Notebooks de EDA, NLP, simulacao IoT e pre-processamento de sinais
+#   - Compativel com qualquer maquina sem GPU dedicada
+#
+#   GPU - Python 3.10.14               pip install -e ".[gpu]"
+#   - tensorflow-gpu == 2.10.0
+#     Ultimo release com suporte NATIVO a GPU no Windows sem WSL2.
+#     A partir do TF 2.11, a Microsoft removeu o suporte direto ao Windows GPU.
+#   - numpy DEVE ser == 1.26.4 (< 2.0)
+#     TF 2.10 usa a C API do NumPy 1.x internamente (bfloat16 dtype).
+#     NumPy 2.x quebra o import com TypeError em dtypes.py._pywrap_bfloat16.
+#   - Ambiente de treino das CNNs (Fases 2+) na RTX 3070 8GB local
+#
+# -----------------------------------------------------------------------------
+# FLUXO DE TRABALHO COM PYENV-WIN (Windows 11)
+#
+#   # Instalar as duas versoes (uma unica vez):
+#   pyenv install 3.12.9
+#   pyenv install 3.10.14
+#
+#   # Criar os venvs separados:
+#   pyenv local 3.12.9
+#   python -m venv .venv-cpu
+#   .venv-cpu\Scripts\activate
+#   pip install -e ".[cpu,dev]"
+#
+#   pyenv local 3.10.14
+#   python -m venv .venv-gpu
+#   .venv-gpu\Scripts\activate
+#   pip install -e ".[gpu,dev]"
+#
+#   # Voltar ao padrao (este arquivo):
+#   pyenv local 3.12.9
+#
+# -----------------------------------------------------------------------------
+# HARDWARE DE DESENVOLVIMENTO
+#   ROG Strix G713QR - Windows 11 Pro
+#   CPU: AMD Ryzen 9 5900HX (8C/16T, 4.48 GHz boost)
+#   RAM: 64 GB DDR4 3200 MHz
+#   GPU: NVIDIA RTX 3070 Laptop 8GB (CUDA 11.x para tensorflow-gpu 2.10.0)
+#   SSD: XPG SPECTRIX S40G 3.6 TB (remote DVC local)
+# =============================================================================
+3.12.9
