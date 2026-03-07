@@ -1,0 +1,21 @@
+# Sites
+https://mimic.mit.edu/docs/
+
+https://about.citiprogram.org/
+
+https://physionet.org/settings/training/
+
+https://physionet.org/content/ptb-xl/1.0.3/
+
+https://physionet.org/settings/credentialing/
+
+
+# Youtube Chanel
+https://www.youtube.com/watch?v=TrOG3dtbrpM
+
+
+
+# Github
+https://github.com/BrahimFakri/Patient-Health-Data-Analysis-And-Feature-Extraction-For-Machine-Learning?tab=readme-ov-file
+
+
