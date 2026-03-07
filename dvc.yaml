@@ -1,0 +1,161 @@
+# =============================================================================
+# dvc.yaml — last_year/
+# FIAP AI - 2 Ano Letivo (2026) - Projeto Cardio-Edge-AI
+#
+# Pipeline declarativo DVC. Este arquivo fica no root de last_year/ porque
+# o `dvc init` deve ser executado aqui — onde ja estao .gitignore e .dvcignore.
+# O `wdir` de cada stage aponta para challenge/ai_cardiology/, mantendo
+# os caminhos internos relativos e legiveis.
+#
+# INICIALIZACAO (rodar uma unica vez):
+#   cd last_year/
+#   dvc init
+#   dvc remote add -d local_storage "C:\dvc-remotes\cardio-edge-ai"
+#   dvc remote default local_storage
+#
+# REPRODUCAO:
+#   dvc repro                        <- executa apenas stages desatualizados
+#   dvc repro --force                <- forca re-execucao completa
+#   dvc repro signal_vision          <- stage especifico e suas dependencias
+#   dvc dag                          <- visualiza o grafo de dependencias
+#
+# PRE-REQUISITO ANTES DO PRIMEIRO repro:
+#   dvc pull                         <- restaura dados brutos do remote DVC local
+#
+# ORDEM DE EXECUCAO (inferida automaticamente pelo DVC via DAG):
+#   ptbxl_eda -> iot_simulation
+#             -> signal_vision
+#   nlp_pruning -> nlp_engineering
+#
+# NOTA SOBRE cmd:
+#   `jupyter nbconvert --to notebook --execute --inplace` executa o notebook
+#   e salva o resultado com outputs no proprio .ipynb, preservando o
+#   storytelling visual (graficos, tabelas) para avaliacao da FIAP.
+# =============================================================================
+
+stages:
+
+  # ---------------------------------------------------------------------------
+  # STAGE 1 - EDA e Arquitetura Dual PTB-XL
+  # ---------------------------------------------------------------------------
+  # Ponto de entrada de todo o pipeline. Ingere o PTB-XL bruto e produz as
+  # duas matrizes centrais do projeto:
+  #   - ptbxl_engineered_features.csv: 6.665 Gemeos Digitais x 20 features
+  #     (IMC, BSA Mosteller, LBM, TMB, Desvio de Coorte, flag HIPAA, vetor
+  #     alvo Multi-Label com 6 superclasses)
+  #   - ptbxl_gateway_fallback.csv: 15.051 exames sem biometria completa
+  #
+  # Prova estatistica incluida: Pearson r=-0,099 (p=4,87e-16) entre IMC e
+  # voltagem ECG, validando a necessidade da arquitetura multimodal.
+  # ---------------------------------------------------------------------------
+  ptbxl_eda:
+    wdir: challenge/ai_cardiology
+    cmd: jupyter nbconvert --to notebook --execute --inplace notebooks/ptblxl_eda.ipynb
+    deps:
+      - notebooks/ptblxl_eda.ipynb
+      - data/raw/ptbxl/ptbxl_database.csv     # 21.799 registros, 28 colunas
+      - data/raw/ptbxl/scp_statements.csv     # dicionario dos 71 codigos SCP-ECG
+    outs:
+      - data/processed/ptbxl/features/ptbxl_engineered_features.csv:
+          cache: false   # [GIT OK] ~2MB - versionado diretamente no Git
+      - data/processed/ptbxl/features/ptbxl_gateway_fallback.csv:
+          cache: false   # [GIT OK] ~1MB - versionado diretamente no Git
+
+  # ---------------------------------------------------------------------------
+  # STAGE 2 - Calibracao Arquitetural IoT (Simulacao Wearable 24h)
+  # ---------------------------------------------------------------------------
+  # Notebook de calibracao, nao de producao de dado clinico. Modela as tres
+  # camadas do ecossistema fisico com 86.400 epocas (24h):
+  #   - XIAO nRF52840 Sense + ADS1293 (aquisicao ECG 24-bit, 3 canais)
+  #   - Raspberry Pi 5 + Google Coral USB (inferencia TFLite, 0,333ms)
+  #   - Motor estocastico: curva termodinamica LiPo 750mAh, artefatos clinicos
+  #     (Baseline Wander, EMG Valsalva, Aliasing 60Hz->40Hz), evento IAM
+  #
+  # Depende do stage anterior para usar distribuicoes demograficas reais do
+  # PTB-XL como parametros do Gemeo Digital comportamental.
+  # ---------------------------------------------------------------------------
+  iot_simulation:
+    wdir: challenge/ai_cardiology
+    cmd: jupyter nbconvert --to notebook --execute --inplace notebooks/holter_iot_data_simulation.ipynb
+    deps:
+      - notebooks/holter_iot_data_simulation.ipynb
+      - data/processed/ptbxl/features/ptbxl_engineered_features.csv
+    outs:
+      - data/processed/simulations/holter_iot_data_simulation.csv:
+          cache: false   # [DVC-no-cache] 468MB - dado sintetico, reproduzivel via dvc repro
+                         # bloqueado no .gitignore; nao vai ao Git nem ao cache DVC
+
+  # ---------------------------------------------------------------------------
+  # STAGE 3 - Processamento Multimodal de Sinais e Visao Computacional
+  # ---------------------------------------------------------------------------
+  # Consome os sinais WFDB brutos dos 6.665 Gemeos Digitais. Pipeline DSP:
+  #   Butterworth HP 0,5Hz ord.3 + Notch 50Hz Q=30, filtfilt zero-phase
+  #   -> remocao de 29,6% da energia de ruido
+  #   -> STFT (Hann, nperseg=64, noverlap=56, nfft=256)
+  #   -> espectrogramas (129,118) redimensionados para 224x224px
+  #   -> normalizacao Min-Max [0,1]
+  #   -> particionamento strat_fold: treino 5.314 / val 683 / teste 668
+  #
+  # Saida mais pesada do pipeline: ~1,3GB de tensores .npy + PNGs de auditoria.
+  # Requer `dvc pull` dos dados brutos antes da primeira execucao.
+  # ---------------------------------------------------------------------------
+  signal_vision:
+    wdir: challenge/ai_cardiology
+    cmd: jupyter nbconvert --to notebook --execute --inplace notebooks/ptbxl_signal_vision_eda.ipynb
+    deps:
+      - notebooks/ptbxl_signal_vision_eda.ipynb
+      - data/raw/ptbxl/records100/             # sinais WFDB 100Hz - requer dvc pull
+      - data/processed/ptbxl/features/ptbxl_engineered_features.csv
+    outs:
+      - data/processed/ptbxl/tensors/          # [DVC] 9 arrays .npy ~1,3GB
+      - data/processed/ptbxl/images/ecg_12_lead_grids/  # [DVC] 100 PNGs clinicos
+      - data/processed/ptbxl/images/spectrograms/       # [DVC] 100 PNGs espectrogramas
+
+  # ---------------------------------------------------------------------------
+  # STAGE 4 - Poda e Curadoria do Corpus NLP
+  # ---------------------------------------------------------------------------
+  # OrquestradorPodaPDF com Pruning Maps por dominio sobre 27 PDFs brutos:
+  #   - Diretrizes SBC/SUS: reducao 76%-89% do ruido
+  #   - Relatos clinicos: preservacao de anamnese e achados
+  #   - Bulas ANVISA: retencao exclusiva de indicacoes, contraindicacoes,
+  #     posologia
+  # Taxa media de reducao dimensional: ~55%
+  #
+  # Saidas com politicas de rastreamento distintas:
+  #   pruned_pdfs/ -> [DVC] binarios cache no remote local
+  #   parsed_txt/  -> [GIT OK] texto puro, diff legivel, <1MB cada
+  # ---------------------------------------------------------------------------
+  nlp_pruning:
+    wdir: challenge/ai_cardiology
+    cmd: jupyter nbconvert --to notebook --execute --inplace notebooks/nlp_data_pruning.ipynb
+    deps:
+      - notebooks/nlp_data_pruning.ipynb
+      - data/raw/nlp/                          # PDFs brutos - requer dvc pull
+    outs:
+      - data/processed/nlp/pruned_pdfs/        # [DVC] 26 PDFs podados ~20MB
+      - data/processed/nlp/parsed_txt/:
+          cache: false                         # [GIT OK] 26 .txt legiveis no Git
+
+  # ---------------------------------------------------------------------------
+  # STAGE 5 - Engenharia Semantica e Lookup de Gatilho Assincrono
+  # ---------------------------------------------------------------------------
+  # Pipeline ETL completo sobre os 26 PDFs podados:
+  #   - Sanitizacao lexical em 3 passagens: 479 tokens proibidos
+  #   - Fuzzy Matching Levenshtein (threshold 0,85): 35 correcoes de OCR
+  #   - Stemming RSLP: -35,5% do Feature Space (-3.463 dimensoes redundantes)
+  #   - Vetorizacao TF-IDF: 6.276 dimensoes de alto valor diagnostico
+  #
+  # Entregavel: edge_trigger_lookup.json (6,41KB)
+  # Lookup Table com Top-10 tensores clinicos por documento para inferencia
+  # semantica assincrona em O(1) no Raspberry Pi 5 sem NLP em tempo real.
+  # ---------------------------------------------------------------------------
+  nlp_engineering:
+    wdir: challenge/ai_cardiology
+    cmd: jupyter nbconvert --to notebook --execute --inplace notebooks/nlp_data_engineer.ipynb
+    deps:
+      - notebooks/nlp_data_engineer.ipynb
+      - data/processed/nlp/parsed_txt/
+      - data/processed/nlp/pruned_pdfs/
+    outs:
+      - data/processed/nlp/cleaned/edge_trigger_lookup.json:
+          cache: false                         # [GIT OK] 6,41KB - versionado no Git
