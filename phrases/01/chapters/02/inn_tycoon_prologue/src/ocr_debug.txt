@@ -1,0 +1,17 @@
+Attributes
+Hide Default Values
+
+Bed Frice
+Bath Price
+
+Steam Bath Price
+
+Bedroom Object Cost
+
+Kitchen Object Cost
+
+Bathroom Object Cost
+
+Cellar Object Cost
+
+
