@@ -1,0 +1,117 @@
+# =============================================================================
+# pyproject.toml — CardioIA · FIAP 2026
+# Padrão PEP 517/518/621 (setuptools como build backend)
+#
+# DOIS AMBIENTES DISPONÍVEIS:
+#   gpu  → Python 3.10 + CUDA 11.x  → pip install -e ".[gpu]"
+#   cpu  → Python 3.12, sem CUDA    → pip install -e ".[cpu]"
+#
+# CONTEXTO:
+#   tensorflow-gpu==2.10.0 é o último release com suporte nativo a GPU no
+#   Windows sem WSL2. Por isso o venv gpu exige Python 3.10 estritamente.
+#   tensorflow==2.20.0 (cpu) funciona em Python 3.12 sem CUDA.
+# =============================================================================
+
+[build-system]
+requires      = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+# -----------------------------------------------------------------------------
+# METADADOS DO PROJETO
+# -----------------------------------------------------------------------------
+[project]
+name            = "cardioai-fiap"
+version         = "1.0.0"
+description     = "CardioIA - Holter IoT com Edge AI para monitoramento cardíaco em tempo real"
+readme          = "README.md"
+requires-python = ">=3.10"
+license         = {text = "MIT"}
+authors         = [
+    {name = "Isaac Maciel", url = "https://br.linkedin.com/in/isaac-maciel"},
+]
+keywords = [
+    "cardiology", "ECG", "edge-ai", "IoT",
+    "NLP", "machine-learning", "PTB-XL", "holter",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.12",
+]
+
+# -----------------------------------------------------------------------------
+# DEPENDÊNCIAS BASE
+# Usadas por todos os notebooks - independentes de GPU e versão de TF.
+# Notebooks cobertos:
+#   NB1 ptblxl_eda                  → numpy, pandas, sklearn, matplotlib, seaborn
+#   NB2 holter_iot_data_simulation  → numpy, pandas, matplotlib
+#   NB3 ptbxl_signal_vision_eda     → + scipy, scikit-image, wfdb  (+ TF via optional)
+#   NB4 nlp_data_pruning            → + PyPDF2
+#   NB5 nlp_data_engineer           → + PyMuPDF, nltk, sklearn
+# -----------------------------------------------------------------------------
+dependencies = [
+    # Data Science Core
+    # Nota: o grupo [gpu] exige numpy<2 — ver restrição em optional-dependencies
+    "numpy>=1.26.4",
+    "pandas>=2.3.3",
+    "matplotlib>=3.10.8",
+    "seaborn>=0.13.2",
+    "scikit-learn>=1.7.2",
+    "scipy>=1.15.3",
+    "scikit-image>=0.25.2",
+
+    # ECG / Sinais Biomédicos (NB3)
+    "wfdb>=4.3.1",
+
+    # NLP / PDF (NB4, NB5)
+    "PyPDF2>=3.0.1",
+    "PyMuPDF>=1.27.1",
+    "nltk>=3.9.2",
+
+    # Jupyter / Reprodutibilidade
+    "ipykernel>=7.2.0",
+    "watermark>=2.6.0",
+]
+
+# -----------------------------------------------------------------------------
+# DEPENDÊNCIAS OPCIONAIS
+# -----------------------------------------------------------------------------
+[project.optional-dependencies]
+
+# pip install -e ".[gpu]"
+# Python 3.10 estrito + CUDA 11.x
+# tensorflow-gpu 2.10.0 = último suporte nativo a GPU no Windows sem WSL2
+# numpy DEVE ser <2.0: TF 2.10 usa C API do NumPy 1.x (bfloat16 dtype).
+# NumPy 2.x quebra o import com TypeError em dtypes.py._pywrap_bfloat16.
+gpu = [
+    "numpy==1.26.4",
+    "tensorflow-gpu==2.10.0",
+    "keras==2.10.0",
+    "Keras-Preprocessing==1.1.2",
+    "tensorboard==2.10.1",
+    "tensorflow-estimator==2.10.0",
+    "tensorflow-io-gcs-filesystem==0.31.0",
+]
+
+# pip install -e ".[cpu]"
+# Python 3.12+ sem CUDA - TF moderno (Keras 3.x)
+cpu = [
+    "tensorflow>=2.20.0",
+    "keras>=3.13.2",
+    "tensorboard>=2.20.0",
+]
+
+# pip install -e ".[dev]"
+# Ferramentas de versionamento e auditoria de dados
+dev = [
+    "dvc>=3.0.0",
+    "jupyter>=1.1.1",
+]
+
+# -----------------------------------------------------------------------------
+# SETUPTOOLS - projeto de notebooks, sem pacote Python para instalar
+# -----------------------------------------------------------------------------
+[tool.setuptools]
+packages = []
