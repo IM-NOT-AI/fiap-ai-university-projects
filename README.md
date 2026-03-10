@@ -1103,6 +1103,135 @@ dvc dag
 
 </details>
 
+<br>
+
+<details>
+  <summary><strong>Correção - Entregáveis e Contexto da Submissão</strong></summary>
+  <br>
+
+<p align="justify">
+  Esta seção documenta o contexto que motivou a criação da pasta <code>entregaveis_fase1/</code> e os ajustes técnicos realizados após o feedback do professor.
+</p>
+
+<br>
+
+<p align="justify"><strong>Motivação - Feedback do Professor Caique Nonato</strong></p>
+
+<p align="justify">
+  Ao avaliar o repositório, o professor Caique Nonato identificou dificuldade em localizar os arquivos <code>.csv</code> dos dados numéricos e as imagens de medição cardiológica, além de solicitar que os textos explicativos fossem entregues no formato <code>.txt</code> para uso futuro na etapa de NLP. A mensagem completa está registrada abaixo:
+</p>
+
+<p align="center">
+  <img src="./challenge/ai_cardiology/docs/assets/readme/motivo_pasta_entregaveis.png" alt="feedback-professor-caique" width="720"/>
+</p>
+
+<br>
+
+<p align="justify"><strong>Regra da Plataforma FIAP - Limite de Upload</strong></p>
+
+<p align="justify">
+  A seção de entrega do Portal do Aluno FIAP possui restrição técnica de <strong>256 MB por arquivo</strong> e <strong>no máximo 20 anexos</strong> por submissão, conforme exibido na interface abaixo. Essa restrição é esperada dado o volume de alunos e o tempo de análise da banca.
+</p>
+
+<p align="center">
+  <img src="./challenge/ai_cardiology/docs/assets/readme/entregaveis_plataforma_regra.png" alt="regra-plataforma-fiap" width="720"/>
+</p>
+
+<br>
+
+<p align="justify"><strong>Tentativa de Upload - Erro por Excesso de Tamanho</strong></p>
+
+<p align="justify">
+  Na primeira tentativa, foi realizado o download completo do Data Lake do Google Drive. O Drive particionou o conteúdo em 2 pastas comprimidas, provavelmente devido ao peso dos arquivos maiores (tensores <code>.npy</code> de 1,3 GB e o CSV Holter de 468 MB). O arquivo <code>.zip</code> gerado excedeu o limite de 256 MB, resultando no erro abaixo:
+</p>
+
+<p align="center">
+  <img src="./challenge/ai_cardiology/docs/assets/readme/entregaveis_plataforma_erro.png" alt="erro-upload-plataforma-fiap" width="480"/>
+</p>
+
+<br>
+
+<p align="justify"><strong>Solução - Pasta Curada com 17 Arquivos (~6 MB)</strong></p>
+
+<p align="justify">
+  A resposta foi criar a pasta <code>entregaveis_fase1/</code> com apenas os artefatos essenciais para avaliação, excluindo os binários pesados (tensores, CSV Holter, PDFs de credenciamento). Os artefatos de grande volume permanecem no Google Drive e versionados via DVC. Dois ajustes técnicos foram feitos em paralelo e commitados:
+</p>
+
+<ul>
+  <li><strong>NB3 - ptbxl_signal_vision_eda.ipynb:</strong> caminho de exportação dos tensores estava desatualizado após refatoração de diretórios (<code>data/processed/tensors/</code> corrigido para <code>data/processed/ptbxl/tensors/</code>). O notebook foi re-executado com sucesso após o fix.</li>
+  <li><strong>NB3 e NB4 - versões de bibliotecas:</strong> o cabeçalho de versões de dependências, padrão de documentação adotado em todos os notebooks, estava ausente nesses dois arquivos e foi adicionado.</li>
+</ul>
+
+</details>
+
+<br>
+
+<details>
+  <summary><strong>Envolvidos no Projeto</strong></summary>
+  <br>
+
+<br>
+
+<table>
+  <tr>
+    <td align="center" width="160">
+      <img src="./challenge/ai_cardiology/docs/assets/readme/andre_godoi.png" alt="André Godoi" width="120" style="border-radius:8px"/><br>
+      <strong>André Godoi</strong>
+    </td>
+    <td>
+      <p><strong>COORDENADOR SCRUM MASTER DE IA</strong></p>
+      <ul>
+        <li>Coordenador Acadêmico do CST em Inteligência Artificial - FIAP (Mai 2024 - Presente)</li>
+        <li>Scrum Master Acadêmico - FIAP (Fev 2022 - Presente): gerente de projeto acadêmico entre empresas parceiras e alunos submetidos a desafios profissionais reais</li>
+        <li>Professor de IoT, Telecom, IA, Cloud e Indústria 4.0 - FIAP (Ago 2017 - Presente)</li>
+        <li>Professor de Pós-graduação em Segurança Cibernética de IoT - Inteli (Nov 2024 - Presente)</li>
+        <li>Especialista IoT e AWS: Instrutor Pirelli Pneus (Campinas), Stone (Cloud AWS), AACD (Microcontroladores)</li>
+        <li>Fundador - Inova Fusca: soluções IoT e sistemas embarcados (Nov 2023 - Presente)</li>
+        <li>Certificações: AWS Certified Cloud Practitioner, Google Teacher Certified L2, Google Innovator Teacher</li>
+        <li>8+ anos de FIAP com passagem pela Estácio (16 anos), FMU (4 anos) e FAI (6 anos)</li>
+      </ul>
+    </td>
+  </tr>
+  <tr><td colspan="2"><br></td></tr>
+  <tr>
+    <td align="center" width="160">
+      <img src="./challenge/ai_cardiology/docs/assets/readme/caique_nonato.png" alt="Caique Nonato" width="120" style="border-radius:8px"/><br>
+      <strong>Caique Nonato</strong>
+    </td>
+    <td>
+      <p><strong>Professor de Inteligência Artificial</strong></p>
+      <ul>
+        <li>Engenheiro Mecatrônico formado pela FIAP (2017-2023)</li>
+        <li>Técnico em Mecatrônica pelo SENAI Roberto Simonsen (2015-2017)</li>
+        <li>Ensino Médio na ETEC Prof. Camargo Aranha, concluído em 2016</li>
+        <li>Pós-graduação em Inteligência Artificial e Ciência de Dados</li>
+        <li>Mentor de Projetos - FIAP School (Jan 2023 - Presente): ensina computação, elétrica, eletrônica e mecânica para alunos do Ensino Fundamental</li>
+        <li>Estagiário em Operações - IBM Brasil (Set 2021 - Presente)</li>
+      </ul>
+    </td>
+  </tr>
+  <tr><td colspan="2"><br></td></tr>
+  <tr>
+    <td align="center" width="160">
+      <img src="./challenge/ai_cardiology/docs/assets/readme/isaac_maciel.png" alt="Isaac Maciel" width="120" style="border-radius:8px"/><br>
+      <strong>Isaac Maciel</strong><br>
+      <small>RM 98222 - 2TIAOA</small>
+    </td>
+    <td>
+      <p><strong>Aluno - Graduando em Inteligência Artificial (FIAP)</strong></p>
+      <ul>
+        <li>Graduando em Inteligência Artificial - FIAP, turno noturno, 2TIAOA</li>
+        <li>~1,5 anos de experiência profissional como Cientista de Dados</li>
+        <li>Formado pela Data Science Academy (DSA) em Ciência de Dados com Aplicações em IA - 560h</li>
+        <li>Horas extracurriculares adicionais em MLOps, engenharia de dados e visão computacional</li>
+        <li>Repositório: <a href="https://github.com/IM-NOT-AI/fiap-ai-university-projects">github.com/IM-NOT-AI/fiap-ai-university-projects</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+</details>
+
 </details>
 
 <br>
