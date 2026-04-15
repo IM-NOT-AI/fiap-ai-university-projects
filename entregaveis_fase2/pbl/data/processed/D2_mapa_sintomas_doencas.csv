@@ -1,0 +1,930 @@
+﻿Sintoma_1,Sintoma_2,Sintoma_3,Doenca_Associada,Superclasse_PTB-XL,Nivel_Risco,Trigger_Score
+sintoma,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,2
+sintoma,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,1
+dor,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,2
+hipertensao,insuficiencia,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,0
+sintoma,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,2
+sintoma,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,2
+dor,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,0
+sintoma,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,1
+edema,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,1
+dor,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,3
+dor,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,1
+sintoma,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,1
+sintoma,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,4
+sintoma,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,3
+refere,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,0
+sintoma,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,1
+sintoma,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,1
+sintoma,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,1
+nausea,vomito,sintoma,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,0
+hemoptise,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,2
+taquicardia,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,2
+edema,hipotensao,choque,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,0
+dor,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,0
+sintoma,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,4
+sintoma,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,3
+sintoma,,,Trombólise no infarto agudo do miocárdio (alteplase),MI,alto,3
+refere,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,3
+insuficiencia,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,3
+taquicardia,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,1
+dor,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,0
+dor,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,1
+insuficiencia,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,2
+dor,choque,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,1
+sintoma,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,2
+dispneia,tosse,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,1
+dispneia,febre,fadiga,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,0
+insuficiencia,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,2
+insuficiencia,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,1
+sintoma,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,1
+dor,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,1
+angina,insuficiencia,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,1
+dor,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,1
+dor,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,1
+dor,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,1
+hipotensao,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,2
+dor,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,1
+dor,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,2
+dor,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,3
+dor,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,3
+sintoma,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,3
+nausea,vomito,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,1
+edema,insuficiencia,choque,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,2
+hipertensao,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,3
+insuficiencia,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,2
+tosse,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,1
+sintoma,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,2
+sintoma,,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,1
+taquicardia,insuficiencia,,Arritmias e distúrbios de condução cardíaca (amiodarona),CD,alto,0
+angina,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,3
+angina,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,2
+dor,precordial,angina,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,2
+apresentou,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,3
+sintoma,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,0
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,2
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,0
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,0
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,0
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,3
+dor,angina,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,1
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,1
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,2
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,2
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,4
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,2
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,0
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,0
+refere,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,2
+angina,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,1
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,2
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,1
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,1
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,1
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,2
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,2
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,2
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,1
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,3
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,3
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,3
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,3
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,1
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,1
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,1
+insuficiencia,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,3
+insuficiencia,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,3
+vomito,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,3
+vomito,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,1
+dor,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,2
+sintoma,,,Síndrome coronariana aguda e antiagregação plaquetária (clopidogrel),MI,alto,0
+insuficiencia,,,Anticoagulação no infarto e síndrome coronariana (enoxaparina),MI,alto,1
+angina,,,Anticoagulação no infarto e síndrome coronariana (enoxaparina),MI,alto,0
+dor,,,Anticoagulação no infarto e síndrome coronariana (enoxaparina),MI,alto,2
+insuficiencia,,,Anticoagulação no infarto e síndrome coronariana (enoxaparina),MI,alto,2
+insuficiencia,,,Anticoagulação no infarto e síndrome coronariana (enoxaparina),MI,alto,2
+dor,sintoma,,Anticoagulação no infarto e síndrome coronariana (enoxaparina),MI,alto,0
+sintoma,,,Anticoagulação no infarto e síndrome coronariana (enoxaparina),MI,alto,0
+sintoma,,,Anticoagulação no infarto e síndrome coronariana (enoxaparina),MI,alto,0
+angina,,,Anticoagulação no infarto e síndrome coronariana (enoxaparina),MI,alto,3
+angina,,,Anticoagulação no infarto e síndrome coronariana (enoxaparina),MI,alto,2
+insuficiencia,,,Anticoagulação no infarto e síndrome coronariana (enoxaparina),MI,alto,1
+insuficiencia,,,Anticoagulação no infarto e síndrome coronariana (enoxaparina),MI,alto,0
+refere,,,Anticoagulação no infarto e síndrome coronariana (enoxaparina),MI,alto,1
+dor,,,Anticoagulação no infarto e síndrome coronariana (enoxaparina),MI,alto,1
+dor,,,Anticoagulação no infarto e síndrome coronariana (enoxaparina),MI,alto,0
+sintoma,,,Anticoagulação no infarto e síndrome coronariana (enoxaparina),MI,alto,0
+dor,,,Anticoagulação no infarto e síndrome coronariana (enoxaparina),MI,alto,4
+febre,nausea,,Anticoagulação no infarto e síndrome coronariana (enoxaparina),MI,alto,0
+sintoma,,,Anticoagulação no infarto e síndrome coronariana (enoxaparina),MI,alto,0
+sintoma,,,Anticoagulação no infarto e síndrome coronariana (enoxaparina),MI,alto,3
+hipotensao,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,0
+choque,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,3
+taquicardia,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,2
+choque,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,2
+choque,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,2
+choque,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,1
+choque,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,0
+dor,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,0
+choque,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,2
+choque,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,4
+choque,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,3
+choque,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,2
+choque,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,2
+choque,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,3
+insuficiencia,choque,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,0
+refere,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,0
+dor,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,1
+taquicardia,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,3
+sintoma,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,3
+hipertensao,sintoma,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,0
+dor,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,1
+dor,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,1
+dor,hipertensao,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,3
+taquicardia,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,3
+dor,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,0
+dor,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,3
+dor,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,0
+hipotensao,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,6
+dor,vomito,sudorese,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,1
+hipertensao,,,Choque cardiogênico e vasopressão (noradrenalina),CD,alto,3
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,3
+sintoma,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+hipertensao,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,2
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,2
+insuficiencia,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,2
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,3
+dor,angina,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,angina,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,2
+sintoma,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,precordial,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,edema,taquicardia,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+taquicardia,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+refere,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,sintoma,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+insuficiencia,refere,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,3
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,3
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,2
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+edema,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+cianose,insuficiencia,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,insuficiencia,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+angina,choque,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,precordial,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,hipotensao,choque,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+hipotensao,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,angina,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,3
+precordial,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+sintoma,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,insuficiencia,choque,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+sintoma,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+sintoma,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+hipotensao,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+sintoma,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+hipertensao,angina,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,choque,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,3
+dor,angina,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,taquicardia,insuficiencia,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,sintoma,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,roncos,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,insuficiencia,choque,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,taquicardia,hipertensao,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,choque,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,refere,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,refere,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,6
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,3
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,3
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,4
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,angina,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+refere,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,3
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,2
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,2
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,3
+dor,refere,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,4
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,2
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,3
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,2
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,2
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,2
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,2
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,2
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,refere,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+refere,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,3
+refere,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,6
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,2
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+taquicardia,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,sintoma,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,taquicardia,angina,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,2
+dor,refere,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,2
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,2
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,2
+apresentou,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+apresentou,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,refere,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+sintoma,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,2
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,3
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dispneia,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+sincope,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,2
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,6
+dor,refere,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,3
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,5
+refere,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,1
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+dor,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,3
+hipotensao,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+angina,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,0
+refere,,,Angina instável e síndrome coronariana sem elevação do ST,STTC,alto,2
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,1
+refere,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,3
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,2
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,3
+apresentou,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,3
+hipertensao,insuficiencia,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,4
+hipertensao,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,3
+insuficiencia,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,3
+insuficiencia,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,1
+insuficiencia,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,1
+refere,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,6
+apresentou,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,3
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,2
+refere,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,3
+hipertensao,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,1
+insuficiencia,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,1
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,1
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,5
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,7
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,2
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,1
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,3
+dor,refere,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,6
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,5
+apresentou,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,4
+dor,refere,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,4
+refere,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,6
+refere,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,2
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,3
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+refere,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,3
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,3
+dor,sintoma,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,2
+refere,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,3
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,1
+insuficiencia,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,2
+dor,hipertensao,insuficiencia,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,3
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,7
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,1
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+tontura,queixa,sintoma,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,refere,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+tontura,fadiga,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+sintoma,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+sintoma,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,2
+apresentou,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,2
+refere,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+sintoma,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,2
+sintoma,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+sintoma,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+refere,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,1
+sintoma,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,tosse,nausea,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,2
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+sintoma,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,hipotensao,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,refere,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,1
+dor,sintoma,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,2
+taquicardia,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,2
+sintoma,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,2
+sintoma,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,2
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,2
+choque,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+sintoma,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+sintoma,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,1
+sintoma,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,2
+tosse,,,Fibrilação atrial - manejo e controle do ritmo cardíaco,CD,alto,0
+dor,choque,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,5
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+precordial,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,dispneia,hipotensao,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+choque,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,choque,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,4
+dor,dispneia,taquicardia,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,3
+choque,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+dor,choque,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+choque,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+choque,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+sintoma,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,choque,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,8
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+sintoma,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,2
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,2
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+vomito,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+tosse,vomito,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,7
+tosse,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+refere,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,3
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,2
+dor,taquicardia,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+choque,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,2
+dor,choque,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+choque,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+choque,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+dor,choque,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,2
+choque,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,4
+refere,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,8
+choque,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,6
+taquicardia,choque,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,2
+choque,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,2
+choque,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,3
+refere,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,2
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,4
+apresentou,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,2
+dor,precordial,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,4
+dor,insuficiencia,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,2
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,2
+dor,precordial,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,2
+hipotensao,choque,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+sintoma,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+sintoma,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+sintoma,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,3
+sintoma,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,2
+sintoma,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,3
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+taquicardia,queixa,sintoma,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+sintoma,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+sintoma,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+sintoma,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+sintoma,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dispneia,tontura,sintoma,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+sintoma,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+hipotensao,choque,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+sintoma,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+taquicardia,choque,sintoma,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+sintoma,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+sintoma,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,taquicardia,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+sincope,hipotensao,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,palpitacao,hipotensao,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+tontura,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,5
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,dispneia,tosse,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+dor,hipotensao,choque,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,3
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,hipotensao,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+dor,edema,turgencia,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+choque,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+choque,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+taquicardia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,2
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,2
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+choque,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+angina,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,hipotensao,sintoma,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+angina,sintoma,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,3
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,sintoma,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,edema,hipotensao,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+hipertensao,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+dor,hipertensao,angina,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+dor,sintoma,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+hipotensao,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+choque,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,2
+hipertensao,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+insuficiencia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+insuficiencia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,2
+dor,insuficiencia,sintoma,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+insuficiencia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+sintoma,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dispneia,edema,ortopneia,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+refere,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+dor,insuficiencia,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+insuficiencia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,2
+insuficiencia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,choque,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+sintoma,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+insuficiencia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,sintoma,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,2
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,insuficiencia,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,3
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+dor,insuficiencia,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,hipotensao,insuficiencia,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,4
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,3
+insuficiencia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,2
+hipotensao,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,1
+insuficiencia,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+dor,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+choque,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+choque,,,Ressuscitação cardiopulmonar e parada cardiorrespiratória,CD,alto,0
+insuficiencia,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,2
+sintoma,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,1
+sintoma,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,0
+dispneia,sintoma,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,1
+turgencia,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,0
+dor,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,0
+dispneia,edema,turgencia,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,2
+dispneia,tosse,edema,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,4
+dor,hipertensao,choque,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,0
+refere,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,2
+refere,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,3
+refere,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,1
+insuficiencia,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,0
+sintoma,refere,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,0
+hipotensao,choque,sintoma,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,0
+insuficiencia,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,0
+dispneia,cansaco,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,1
+dor,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,1
+refere,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,0
+dispneia,tontura,angina,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,1
+sintoma,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,1
+sintoma,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,0
+dispneia,sintoma,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,2
+dor,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,2
+tosse,hipotensao,insuficiencia,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,0
+dor,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,0
+dor,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,1
+dor,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,0
+dor,sintoma,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,1
+dor,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,0
+tosse,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,2
+dor,insuficiencia,sintoma,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,4
+dor,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,0
+dor,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,1
+dor,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,4
+dor,sintoma,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,2
+dor,sintoma,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,3
+nausea,vomito,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,0
+sintoma,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,1
+sintoma,,,Insuficiência cardíaca descompensada - protocolo SUS,HYP,alto,1
+dor,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+sintoma,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+dor,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+sintoma,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+sintoma,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+sintoma,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,2
+dor,sintoma,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+dor,dispneia,nausea,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+dor,sintoma,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,3
+dor,sintoma,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,3
+dor,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+dor,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+dor,nausea,vomito,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+angina,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+sintoma,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,2
+sintoma,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+sintoma,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+sintoma,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+dor,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+dispneia,cianose,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+dor,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+dor,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+hipertensao,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+dor,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+taquicardia,hipotensao,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+edema,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+dor,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+edema,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+dor,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+refere,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,2
+dor,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+refere,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,2
+dor,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+dor,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,2
+sintoma,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,2
+sintoma,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,5
+hipertensao,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,4
+choque,refere,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,2
+dor,dispneia,sudorese,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,2
+sintoma,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+sintoma,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+sintoma,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,3
+dor,choque,sintoma,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,4
+dor,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+dor,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,2
+tosse,edema,hipotensao,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+nausea,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+sintoma,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+dor,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+edema,insuficiencia,sintoma,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+angina,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+hipotensao,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+hipotensao,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+hipotensao,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+sintoma,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+dor,tosse,febre,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+sintoma,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+edema,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+sintoma,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+edema,hipotensao,hipertensao,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+insuficiencia,choque,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+choque,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,2
+choque,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,3
+choque,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+insuficiencia,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+dor,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+taquicardia,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,3
+insuficiencia,choque,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+hipotensao,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,3
+choque,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+edema,hipotensao,angina,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+dor,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+refere,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+refere,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+choque,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+choque,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+hipotensao,insuficiencia,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+dor,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+dor,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+angina,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,2
+refere,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+angina,insuficiencia,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+angina,insuficiencia,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,2
+dor,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+sintoma,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+dor,sintoma,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+dor,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,0
+sintoma,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,1
+sintoma,,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,2
+hipertensao,angina,,Síndrome coronariana aguda - protocolo hospitalar SUS,MI,alto,2
+insuficiencia,,,Cardiomiopatia de Chagas com suporte circulatório mecânico,CD,alto,7
+insuficiencia,,,Cardiomiopatia de Chagas com suporte circulatório mecânico,CD,alto,6
+insuficiencia,,,Cardiomiopatia de Chagas com suporte circulatório mecânico,CD,alto,2
+dor,insuficiencia,,Cardiomiopatia de Chagas com suporte circulatório mecânico,CD,alto,4
+choque,,,Cardiomiopatia de Chagas com suporte circulatório mecânico,CD,alto,2
+apresentou,,,Cardiomiopatia de Chagas com suporte circulatório mecânico,CD,alto,0
+dor,,,Cardiomiopatia de Chagas com suporte circulatório mecânico,CD,alto,2
+insuficiencia,,,Cardiomiopatia de Chagas com suporte circulatório mecânico,CD,alto,2
+insuficiencia,,,Cardiomiopatia de Chagas com suporte circulatório mecânico,CD,alto,2
+insuficiencia,,,Cardiomiopatia de Chagas com suporte circulatório mecânico,CD,alto,2
+dor,,,Cardiomiopatia de Chagas com suporte circulatório mecânico,CD,alto,2
+dor,,,Disfunção cardíaca pediátrica por quimioterapia (linfoma),CD,alto,0
+dor,sudorese,quadro de,Disfunção cardíaca pediátrica por quimioterapia (linfoma),CD,alto,1
+refere,,,Disfunção cardíaca pediátrica por quimioterapia (linfoma),CD,alto,2
+edema,apresentou,,Disfunção cardíaca pediátrica por quimioterapia (linfoma),CD,alto,0
+apresentou,,,Disfunção cardíaca pediátrica por quimioterapia (linfoma),CD,alto,1
+refere,,,Disfunção cardíaca pediátrica por quimioterapia (linfoma),CD,alto,2
+dor,,,Disfunção cardíaca pediátrica por quimioterapia (linfoma),CD,alto,3
+taquicardia,hipertensao,quadro de,Disfunção cardíaca pediátrica por quimioterapia (linfoma),CD,alto,4
+refere,,,Disfunção cardíaca pediátrica por quimioterapia (linfoma),CD,alto,2
+dor,febre,sudorese,Disfunção cardíaca pediátrica por quimioterapia (linfoma),CD,alto,1
+sintoma,,,Disfunção cardíaca pediátrica por quimioterapia (linfoma),CD,alto,1
+procurou,,,Fibrilação ventricular por cardiotoxicidade ao 5-fluorouracil,STTC,alto,5
+dor,,,Fibrilação ventricular por cardiotoxicidade ao 5-fluorouracil,STTC,alto,2
+angina,,,Fibrilação ventricular por cardiotoxicidade ao 5-fluorouracil,STTC,alto,1
+insuficiencia,,,Fibrilação ventricular por cardiotoxicidade ao 5-fluorouracil,STTC,alto,2
+apresentou,,,Fibrilação ventricular por cardiotoxicidade ao 5-fluorouracil,STTC,alto,0
+dor,,,Fibrilação ventricular por cardiotoxicidade ao 5-fluorouracil,STTC,alto,1
+apresentou,,,Fibrilação ventricular por cardiotoxicidade ao 5-fluorouracil,STTC,alto,1
+dor,,,Fibrilação ventricular por cardiotoxicidade ao 5-fluorouracil,STTC,alto,1
+hipertensao,,,Fibrilação ventricular por cardiotoxicidade ao 5-fluorouracil,STTC,alto,5
+dor,,,Fibrilação ventricular por cardiotoxicidade ao 5-fluorouracil,STTC,alto,0
+dor,nausea,vomito,IAMCSST com ruptura de parede livre e pseudoaneurisma,MI,alto,5
+sintoma,,,IAMCSST com ruptura de parede livre e pseudoaneurisma,MI,alto,0
+dor,,,IAMCSST com ruptura de parede livre e pseudoaneurisma,MI,alto,0
+taquicardia,hipotensao,,IAMCSST com ruptura de parede livre e pseudoaneurisma,MI,alto,0
+taquicardia,,,IAMCSST com ruptura de parede livre e pseudoaneurisma,MI,alto,1
+dor,,,IAMCSST com ruptura de parede livre e pseudoaneurisma,MI,alto,0
+dor,,,IAMCSST com ruptura de parede livre e pseudoaneurisma,MI,alto,0
+edema,,,IAMCSST com ruptura de parede livre e pseudoaneurisma,MI,alto,2
+insuficiencia,,,Insuficiência cardíaca descompensada por arbovirose,CD,alto,4
+insuficiencia,,,Insuficiência cardíaca descompensada por arbovirose,CD,alto,2
+febre,,,Insuficiência cardíaca descompensada por arbovirose,CD,alto,5
+dispneia,febre,queixa,Insuficiência cardíaca descompensada por arbovirose,CD,alto,0
+insuficiencia,,,Insuficiência cardíaca descompensada por arbovirose,CD,alto,0
+turgencia,,,Insuficiência cardíaca descompensada por arbovirose,CD,alto,0
+edema,,,Insuficiência cardíaca descompensada por arbovirose,CD,alto,1
+angina,,,Insuficiência cardíaca descompensada por arbovirose,CD,alto,1
+quadro de,,,Insuficiência cardíaca descompensada por arbovirose,CD,alto,0
+evoluiu com,,,Insuficiência cardíaca descompensada por arbovirose,CD,alto,0
+apresentou,,,Insuficiência cardíaca descompensada por arbovirose,CD,alto,0
+sintoma,,,Insuficiência cardíaca descompensada por arbovirose,CD,alto,1
+dispneia,apresentou,,Insuficiência cardíaca descompensada por arbovirose,CD,alto,1
+insuficiencia,,,Insuficiência cardíaca descompensada por arbovirose,CD,alto,1
+insuficiencia,,,Insuficiência cardíaca descompensada por arbovirose,CD,alto,1
+precordial,precordialgia,,Insuficiência cardíaca descompensada por arbovirose,CD,alto,2
+edema,turgencia,evoluiu com,Insuficiência cardíaca descompensada por arbovirose,CD,alto,0
+febre,,,Insuficiência cardíaca descompensada por arbovirose,CD,alto,1
+febre,adinamia,sintoma,Miocardite por coinfecção Dengue/Chikungunya,CD,alto,0
+dor,,,Miocardite por coinfecção Dengue/Chikungunya,CD,alto,0
+hipotensao,,,Miocardite por coinfecção Dengue/Chikungunya,CD,alto,0
+taquicardia,,,Miocardite por coinfecção Dengue/Chikungunya,CD,alto,0
+apresentou,,,Miocardite por coinfecção Dengue/Chikungunya,CD,alto,1
+evoluiu com,,,Miocardite por coinfecção Dengue/Chikungunya,CD,alto,0
+dor,febre,fadiga,Miocardite por coinfecção Dengue/Chikungunya,CD,alto,6
+febre,,,Miocardite por coinfecção Dengue/Chikungunya,CD,alto,0
+hipertensao,,,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,0
+dor,choque,apresentou,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,3
+dor,tosse,febre,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,3
+sintoma,apresentou,,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,0
+dispneia,tosse,febre,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,1
+dispneia,tosse,adinamia,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,1
+tosse,febre,quadro de,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,0
+sintoma,,,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,1
+roncos,,,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,1
+febre,quadro de,evoluiu com,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,1
+dor,taquicardia,turgencia,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,0
+estertores,crepitantes,,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,1
+apresentou,,,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,1
+dor,,,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,1
+edema,,,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,0
+insuficiencia,,,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,0
+taquicardia,mal-estar,dispneico,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,1
+edema,taquicardia,turgencia,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,0
+insuficiencia,quadro de,,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,1
+refere,,,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,4
+dor,,,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,0
+insuficiencia,,,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,0
+insuficiencia,,,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,1
+dor,,,Miocardite aguda por COVID-19 com insuficiência respiratória,CD,alto,0
+sintoma,,,Síndrome de Takotsubo - cardiomiopatia de estresse,STTC,alto,4
+dor,,,Síndrome de Takotsubo - cardiomiopatia de estresse,STTC,alto,2
+chiado,sintoma,,Síndrome de Takotsubo - cardiomiopatia de estresse,STTC,alto,0
+edema,,,Síndrome de Takotsubo - cardiomiopatia de estresse,STTC,alto,1
+refere,,,Síndrome de Takotsubo - cardiomiopatia de estresse,STTC,alto,0
+hipertensao,,,Síndrome de Takotsubo - cardiomiopatia de estresse,STTC,alto,0
+taquicardia,,,Síndrome de Takotsubo - cardiomiopatia de estresse,STTC,alto,2
+dor,,,Síndrome de Takotsubo - cardiomiopatia de estresse,STTC,alto,0
+queixa,,,Síndrome de Takotsubo - cardiomiopatia de estresse,STTC,alto,0
+insuficiencia,,,Síndrome de Takotsubo - cardiomiopatia de estresse,STTC,alto,1
+insuficiencia,,,Síndrome de Takotsubo - cardiomiopatia de estresse,STTC,alto,1
+insuficiencia,queixa,,Síndrome de Takotsubo - cardiomiopatia de estresse,STTC,alto,0
+dor,,,Ceramidas plasmáticas como biomarcadores de risco cardiovascular,NORM,baixo,4
+dor,,,Ceramidas plasmáticas como biomarcadores de risco cardiovascular,NORM,baixo,3
+dor,insuficiencia,,Ceramidas plasmáticas como biomarcadores de risco cardiovascular,NORM,baixo,7
+dor,,,Ceramidas plasmáticas como biomarcadores de risco cardiovascular,NORM,baixo,6
+dor,,,Ceramidas plasmáticas como biomarcadores de risco cardiovascular,NORM,baixo,4
+dor,refere,,Ceramidas plasmáticas como biomarcadores de risco cardiovascular,NORM,baixo,4
+dor,,,Ceramidas plasmáticas como biomarcadores de risco cardiovascular,NORM,baixo,1
+dor,,,Ceramidas plasmáticas como biomarcadores de risco cardiovascular,NORM,baixo,2
+dor,sintoma,,Ceramidas plasmáticas como biomarcadores de risco cardiovascular,NORM,baixo,5
+dor,,,Ceramidas plasmáticas como biomarcadores de risco cardiovascular,NORM,baixo,2
+dor,,,Ceramidas plasmáticas como biomarcadores de risco cardiovascular,NORM,baixo,4
+dor,,,Ceramidas plasmáticas como biomarcadores de risco cardiovascular,NORM,baixo,5
+sintoma,,,Ceramidas plasmáticas como biomarcadores de risco cardiovascular,NORM,baixo,2
+insuficiencia,,,"Estrogênio, obesidade e risco de insuficiência cardíaca",HYP,baixo,5
+insuficiencia,,,"Estrogênio, obesidade e risco de insuficiência cardíaca",HYP,baixo,5
+dor,insuficiencia,,"Estrogênio, obesidade e risco de insuficiência cardíaca",HYP,baixo,1
+dor,fadiga,refere,"Estrogênio, obesidade e risco de insuficiência cardíaca",HYP,baixo,3
+insuficiencia,,,"Estrogênio, obesidade e risco de insuficiência cardíaca",HYP,baixo,4
+dor,,,"Estrogênio, obesidade e risco de insuficiência cardíaca",HYP,baixo,2
+dor,,,"Estrogênio, obesidade e risco de insuficiência cardíaca",HYP,baixo,6
+dor,,,"Estrogênio, obesidade e risco de insuficiência cardíaca",HYP,baixo,3
+insuficiencia,,,"Estrogênio, obesidade e risco de insuficiência cardíaca",HYP,baixo,3
+dor,,,"Estrogênio, obesidade e risco de insuficiência cardíaca",HYP,baixo,5
+dor,insuficiencia,,"Estrogênio, obesidade e risco de insuficiência cardíaca",HYP,baixo,5
+dor,,,"Estrogênio, obesidade e risco de insuficiência cardíaca",HYP,baixo,4
+dor,,,Fibrilação atrial em pacientes oncológicos,CD,alto,1
+insuficiencia,,,Fibrilação atrial em pacientes oncológicos,CD,alto,4
+insuficiencia,,,Fibrilação atrial em pacientes oncológicos,CD,alto,2
+hipertensao,insuficiencia,,Fibrilação atrial em pacientes oncológicos,CD,alto,0
+sintoma,,,Fibrilação atrial em pacientes oncológicos,CD,alto,1
+sintoma,,,Fibrilação atrial em pacientes oncológicos,CD,alto,4
+dor,,,Fibrilação atrial em pacientes oncológicos,CD,alto,1
+dor,,,Fibrilação atrial em pacientes oncológicos,CD,alto,1
+dor,febre,,Fibrilação atrial em pacientes oncológicos,CD,alto,4
+dor,,,Fibrilação atrial em pacientes oncológicos,CD,alto,0
+dor,,,Fibrilação atrial em pacientes oncológicos,CD,alto,1
+dor,,,Fibrilação atrial em pacientes oncológicos,CD,alto,4
+sintoma,,,Fibrilação atrial em pacientes oncológicos,CD,alto,4
+dor,,,Fibrilação atrial em pacientes oncológicos,CD,alto,4
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,3
+dor,insuficiencia,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,apresentou,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,2
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,2
+insuficiencia,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,0
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,2
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,0
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,2
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,angina,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,0
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,insuficiencia,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,0
+dor,apresentou,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,0
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,sintoma,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dispneia,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,0
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+insuficiencia,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,1
+insuficiencia,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,0
+insuficiencia,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,0
+dor,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,0
+refere,,,GDF-15 como biomarcador de doenças cardiovasculares,NORM,baixo,0
+dor,,,Índices hematológicos inflamatórios e mortalidade cardiovascular,NORM,baixo,1
+dor,,,Índices hematológicos inflamatórios e mortalidade cardiovascular,NORM,baixo,5
+dor,,,Índices hematológicos inflamatórios e mortalidade cardiovascular,NORM,baixo,5
+dor,,,Índices hematológicos inflamatórios e mortalidade cardiovascular,NORM,baixo,3
+dor,,,Índices hematológicos inflamatórios e mortalidade cardiovascular,NORM,baixo,2
+dor,,,Índices hematológicos inflamatórios e mortalidade cardiovascular,NORM,baixo,5
+dor,,,miRNAs na fisiopatologia cardiovascular,NORM,baixo,3
+dor,,,miRNAs na fisiopatologia cardiovascular,NORM,baixo,2
+dor,,,miRNAs na fisiopatologia cardiovascular,NORM,baixo,1
+dor,,,miRNAs na fisiopatologia cardiovascular,NORM,baixo,1
+dor,,,miRNAs na fisiopatologia cardiovascular,NORM,baixo,3
+dor,,,miRNAs na fisiopatologia cardiovascular,NORM,baixo,1
+dor,,,miRNAs na fisiopatologia cardiovascular,NORM,baixo,1
+dor,,,miRNAs na fisiopatologia cardiovascular,NORM,baixo,3
+dor,,,miRNAs na fisiopatologia cardiovascular,NORM,baixo,5
+dor,,,miRNAs na fisiopatologia cardiovascular,NORM,baixo,6
+dor,,,miRNAs na fisiopatologia cardiovascular,NORM,baixo,3
+dor,insuficiencia,,miRNAs na fisiopatologia cardiovascular,NORM,baixo,3
+dor,,,miRNAs na fisiopatologia cardiovascular,NORM,baixo,3
+apresentou,,,miRNAs na fisiopatologia cardiovascular,NORM,baixo,4
+dor,,,miRNAs na fisiopatologia cardiovascular,NORM,baixo,2
+dor,,,miRNAs na fisiopatologia cardiovascular,NORM,baixo,3
+dor,,,miRNAs na fisiopatologia cardiovascular,NORM,baixo,4
+dor,,,miRNAs na fisiopatologia cardiovascular,NORM,baixo,4
+dor,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,4
+insuficiencia,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,2
+refere,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,1
+refere,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,2
+insuficiencia,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,0
+insuficiencia,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,0
+refere,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,2
+refere,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,3
+refere,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,1
+dor,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,2
+refere,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,5
+apresentou,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,5
+refere,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,7
+refere,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,2
+refere,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,2
+refere,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,2
+refere,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,1
+refere,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,2
+refere,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,4
+dor,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,5
+dor,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,2
+dor,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,1
+dor,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,1
+dor,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,1
+dor,,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,1
+dor,choque,,Síndrome cardiorrenal - critérios diagnósticos e prognóstico,CD,alto,5
