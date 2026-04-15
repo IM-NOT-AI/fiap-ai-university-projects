@@ -1,0 +1,62 @@
+{
+  "run_id": "nb7_20260413_164720",
+  "timestamp": "2026-04-13T16:47:20.754112",
+  "author": "Isaac Maciel - RM 98222 - 2TIAOA - FIAP AI 2026",
+  "notebook": "risk_classifier.ipynb (NB7)",
+  "fase": "Fase 2 - Modulo NLP",
+  "data": {
+    "source": "corpus_frases_completo.csv (NB6)",
+    "n_total": 929,
+    "d3_shape": [
+      80,
+      2
+    ],
+    "n_per_class": 40,
+    "test_size": 0.3,
+    "data_hash_d3": "677c455a",
+    "label_mapping": {
+      "alto": "alto risco",
+      "baixo": "baixo risco"
+    }
+  },
+  "pipeline": {
+    "tfidf_max_features": 200,
+    "tfidf_ngram_range": "(1, 3)",
+    "tfidf_sublinear_tf": true,
+    "clf_name": "Regressao Logistica",
+    "clf_C": 5.0,
+    "clf_class_weight": "balanced",
+    "cv_folds": 5,
+    "random_state": 42
+  },
+  "metrics": {
+    "cv_f1_macro_mean": 0.9294,
+    "cv_f1_macro_std": 0.0647,
+    "test_accuracy": 1.0,
+    "test_f1_macro": 1.0,
+    "test_f1_alto_risco": 1.0,
+    "test_f1_baixo_risco": 1.0,
+    "gridsearch_best_cv_f1": 0.965,
+    "bootstrap_f1_macro_mean": 1.0,
+    "bootstrap_f1_macro_ci95": [
+      1.0,
+      1.0
+    ],
+    "optimal_threshold": 0.5,
+    "ap_score": 1.0
+  },
+  "artifacts": {
+    "model_pkl": "data\\processed\\nlp\\risk_classification\\model\\risk_classifier.pkl",
+    "tfidf_pkl": "data\\processed\\nlp\\risk_classification\\model\\tfidf_vectorizer.pkl",
+    "d3_csv": "data\\processed\\nlp\\risk_classification\\frases_risco_rotuladas.csv",
+    "threshold_json": "data\\processed\\nlp\\risk_classification\\model\\optimal_threshold.json",
+    "n_charts": 12
+  },
+  "governance": {
+    "class_balance_ratio": 1.0,
+    "label_leakage_check": "PASS",
+    "pipeline_leakage_check": "PASS",
+    "fn_count_test": 0,
+    "bias_risk": "MEDIO - baixo risco so em revisoes cientificas, sem exemplos clinicos narrativos NORM"
+  }
+}
