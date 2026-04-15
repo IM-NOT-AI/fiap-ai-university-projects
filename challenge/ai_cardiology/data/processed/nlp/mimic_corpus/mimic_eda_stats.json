@@ -1,0 +1,14 @@
+{
+  "total_ecgs_no_dataset": 800035,
+  "total_pacientes": 161352,
+  "total_frases_corpus": 2760117,
+  "frases_rotuladas_total": 1193,
+  "frases_alto_risco": 518,
+  "frases_baixo_risco": 675,
+  "jaccard_vocabular": 0.3476,
+  "fonte": "MIMIC-IV-ECG v1.0",
+  "acesso": "credenciado PhysioNet DUA",
+  "idioma_original": "ingles",
+  "tipo_texto": "interpretacao_automatica_ecg",
+  "domain_leakage_risco": "baixo - mesma fonte para ambas as classes"
+}
