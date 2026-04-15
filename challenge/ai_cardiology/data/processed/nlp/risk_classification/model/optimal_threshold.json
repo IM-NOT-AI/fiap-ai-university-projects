@@ -1,0 +1,10 @@
+{
+  "optimal_threshold": 0.5,
+  "recall_alto_risco": 1.0,
+  "precision_alto_risco": 1.0,
+  "fn_count": 0,
+  "fp_count": 0,
+  "ap_score": 1.0,
+  "target_recall": 0.95,
+  "generated_at": "2026-04-13T16:29:52.006676"
+}

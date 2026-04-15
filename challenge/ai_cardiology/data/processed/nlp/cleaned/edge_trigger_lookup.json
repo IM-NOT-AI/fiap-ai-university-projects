@@ -141,13 +141,13 @@
         "pesso",
         "quadr",
         "trat",
-        "pediatr"
+        "canc"
     ],
     "relato_caso_fibrilacao_ventricular_cardiotoxicidade_filtrado.txt": [
         "fluorouracil",
         "izm",
-        "cdi",
         "cardiotoxic",
+        "cdi",
         "arritm",
         "socorr",
         "pront",
@@ -158,14 +158,14 @@
     "relato_caso_iamcsst_ruptura_parede_livre_filtrado.txt": [
         "segment",
         "later",
-        "dilat",
         "complic",
+        "dilat",
+        "pseudoaneurism",
+        "lisbo",
         "vide",
-        "cav",
         "ana",
         "rit",
-        "lisbo",
-        "pseudoaneurism"
+        "cav"
     ],
     "relato_caso_ic_descompensada_arbovirose_filtrado.txt": [
         "arboviros",
@@ -176,8 +176,8 @@
         "descompensaca",
         "zik",
         "vez",
-        "hemodinam",
-        "internaca"
+        "perfil",
+        "hemodinam"
     ],
     "relato_caso_miocardite_coinfeccao_arboviroses_filtrado.txt": [
         "denv",
@@ -196,12 +196,12 @@
         "covid",
         "torax",
         "caet",
-        "rent",
         "uezat",
+        "rent",
         "marc",
         "emergenc",
         "radiograf",
-        "vesicul"
+        "murmuri"
     ],
     "relato_caso_takotsubo_filtrado.txt": [
         "tav",
