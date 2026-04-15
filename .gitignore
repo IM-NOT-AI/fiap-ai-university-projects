@@ -36,6 +36,92 @@ challenge/ai_cardiology/data/processed/mimic-iv-ecg/**
 
 
 # =============================================================================
+# [RESTRICTED] MIMIC-IV-ED 2.2
+# -----------------------------------------------------------------------------
+# Modulo de Pronto-Atendimento do MIMIC-IV. Acesso restrito via PhysioNet,
+# requer a mesma credencial CITI do MIMIC-IV-ECG.
+# Utilizado na Fase 2 para extrair chiefcomplaints reais do NB10 e construir
+# o corpus de risco do NB11 via MIMIC-IV-ECG (laudos GE MUSE).
+#
+# Estrutura local:
+#   data/raw/mimic-iv-ed-2.2/
+#     └── ed/   <- tabelas de pronto-atendimento (triage, diagnosis, medrecon)
+#
+# NUNCA commitar em Git ou DVC remote. Somente os artefatos derivados
+# anonimizados (corpus_mimic_ecg_rotulado_v2.csv, D1, D2, D3) vao ao Git.
+# =============================================================================
+challenge/ai_cardiology/data/raw/mimic-iv-ed-2.2/
+
+
+# =============================================================================
+# [RESTRICTED] MIMIC-IV
+# -----------------------------------------------------------------------------
+# Dataset clinico hospitalar completo do MIT/PhysioNet. Acesso restrito.
+# Utilizado como referencia cruzada para validacao de diagnosticos no NB9.
+#
+# Estrutura local:
+#   data/raw/mimic-iv/
+#     └── hosp/  <- tabelas hospitalares (admissions, diagnoses_icd, etc.)
+#
+# NUNCA commitar em Git ou DVC remote.
+# =============================================================================
+challenge/ai_cardiology/data/raw/mimic-iv/
+
+
+# =============================================================================
+# [DVC] ECG Heartbeat Categorization - MIT-BIH via Kaggle
+# -----------------------------------------------------------------------------
+# Dataset publico de arritmia para treinamento do NB8 (MLP ECG).
+# Fonte: shayanfazeli/heartbeat no Kaggle, derivado do MIT-BIH Arrhythmia
+# Database (PhysioNet). Reformatado para 187 timesteps a 125Hz.
+#
+# Arquivos:
+#   data/raw/heartbeat/
+#     ├── mitbih_train.csv  <- 87.554 amostras, 5 classes (393MB)
+#     └── mitbih_test.csv   <- 21.892 amostras (99MB)
+#
+# Total: ~492MB - inviavel para Git.
+# Gerenciado via: dvc add challenge/ai_cardiology/data/raw/heartbeat/
+# Ponteiro Git: challenge/ai_cardiology/data/raw/heartbeat.dvc
+# =============================================================================
+challenge/ai_cardiology/data/raw/heartbeat/
+
+
+# =============================================================================
+# [ARTEFATO] Checkpoints de treinamento intermediarios
+# -----------------------------------------------------------------------------
+# Arquivos .keras/.h5 salvos pelo ModelCheckpoint a cada epoca durante o
+# treinamento. Volumes variaveis (350KB por checkpoint x N epocas).
+# O modelo final (best val_accuracy) e versionado diretamente em models/.
+# Checkpoints intermediarios sao artefatos de processo, nao entregaveis.
+# =============================================================================
+challenge/ai_cardiology/models/checkpoints/
+
+
+# =============================================================================
+# FRONTEND - dependencias npm
+# -----------------------------------------------------------------------------
+# node_modules/ do Portal CardioIA (React 18 + Vite 6).
+# Gerado via `npm install` a partir do package.json versionado.
+# Tipicamente >200MB, nunca vai ao Git.
+# =============================================================================
+challenge/ai_cardiology/frontend/cardioia-portal/node_modules/
+challenge/ai_cardiology/frontend/cardioia-portal/package-lock.json
+
+
+# =============================================================================
+# FORA DO ESCOPO - iniciacao cientifica e rascunhos
+# -----------------------------------------------------------------------------
+# undergraduate_research/: pesquisa de iniciacao cientifica, repositorio
+# proprio. Excluido deste repo que e dedicado ao CardioIA/FIAP Challenge.
+#
+# codigo.md: rascunho de depuracao local, nao e documentacao do projeto.
+# =============================================================================
+undergraduate_research/
+codigo.md
+
+
+# =============================================================================
 # [DVC] PTB-XL - PhysioNet PTB-XL v1.0.3
 # -----------------------------------------------------------------------------
 # Primeiro dataset escolhido para o projeto (acesso garantido, sem restricao).
