@@ -68,6 +68,26 @@ CHANGELOG.md
 
 
 # =============================================================================
+# MIMIC-IV-ED 2.2 - protecao redundante
+# -----------------------------------------------------------------------------
+# Modulo de Pronto-Atendimento do MIMIC-IV. Tabelas de triage, diagnosticos
+# e medicamentos de pacientes reais. Mesmo nivel de restricao do MIMIC-IV-ECG.
+# Regra redundante: bloqueia hash mesmo se dvc add for chamado num pai.
+# =============================================================================
+**/mimic-iv-ed-2.2/**
+
+
+# =============================================================================
+# MIMIC-IV - protecao redundante
+# -----------------------------------------------------------------------------
+# Dataset hospitalar completo. Tabelas hosp/ contem dados de internacoes,
+# diagnosticos ICD, prescricoes e resultados laboratoriais de pacientes reais.
+# =============================================================================
+**/mimic-iv/hosp/**
+**/mimic-iv/icu/**
+
+
+# =============================================================================
 # ARTEFATOS PYTHON
 # -----------------------------------------------------------------------------
 # Caches de bytecode e artefatos de build que podem aparecer dentro de
