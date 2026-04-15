@@ -25,7 +25,7 @@
 # ORDEM DE EXECUCAO (inferida automaticamente pelo DVC via DAG):
 #   ptbxl_eda -> iot_simulation
 #             -> signal_vision
-#   nlp_pruning -> nlp_engineering
+#   nlp_pruning -> nlp_engineering -> symptom_extraction -> risk_classification
 #
 # NOTA SOBRE cmd:
 #   `jupyter nbconvert --to notebook --execute --inplace` executa o notebook
@@ -159,3 +159,117 @@ stages:
     outs:
       - data/processed/nlp/cleaned/edge_trigger_lookup.json:
           cache: false                         # [GIT OK] 6,41KB - versionado no Git
+
+  # ---------------------------------------------------------------------------
+  # STAGE 6 - Extracao de Sintomas PT-BR (NB6)
+  # ---------------------------------------------------------------------------
+  # Consome o edge_trigger_lookup.json do NB5 e os textos podados para extrair
+  # sintomas cardiologicos via matching baseado em regras ACC/AHA ampliadas.
+  # Produz D1 (10 chiefcomplaints), D2 (mapa sintoma-doenca 929 linhas) e o
+  # corpus_frases_completo.csv base do classificador NB7.
+  # ---------------------------------------------------------------------------
+  symptom_extraction:
+    wdir: challenge/ai_cardiology
+    cmd: jupyter nbconvert --to notebook --execute --inplace notebooks/symptom_extraction.ipynb
+    deps:
+      - notebooks/symptom_extraction.ipynb
+      - src/enrich_nb6.py
+      - data/processed/nlp/cleaned/edge_trigger_lookup.json
+      - data/processed/nlp/parsed_txt/
+    outs:
+      - data/processed/nlp/symptom_extraction/:
+          cache: false                         # [GIT OK] CSVs e TXTs legiveis
+
+  # ---------------------------------------------------------------------------
+  # STAGE 7 - Classificador de Risco PT-BR v1 (NB7)
+  # ---------------------------------------------------------------------------
+  # TF-IDF + Logistic Regression sobre o corpus PT-BR. Resultado F1=1.000
+  # diagnosticado como leakage de dominio (Jaccard vocabulario=0.021).
+  # Stage mantido para reproduzir o historico do problema e sua correcao.
+  # ---------------------------------------------------------------------------
+  risk_classification:
+    wdir: challenge/ai_cardiology
+    cmd: jupyter nbconvert --to notebook --execute --inplace notebooks/risk_classifier.ipynb
+    deps:
+      - notebooks/risk_classifier.ipynb
+      - data/processed/nlp/symptom_extraction/corpus_frases_completo.csv
+    outs:
+      - data/processed/nlp/risk_classification/:
+          cache: false                         # [GIT OK] pkl 9.8KB, CSVs, charts
+
+  # ---------------------------------------------------------------------------
+  # STAGE 8 - EDA Corpus MIMIC-IV-ECG (NB9)
+  # ---------------------------------------------------------------------------
+  # Diagnostico formal do leakage e EDA do corpus MIMIC-IV-ECG: 800.035 ECGs,
+  # laudos automatizados GE MUSE. Selecao de 1.193 frases com 47 padroes
+  # ACC/AHA. Jaccard pos-pivote=0.224 - modelo aprende conteudo clinico real.
+  #
+  # PRE-REQUISITO: acesso MIMIC-IV-ECG via PhysioNet (credencial CITI).
+  # Dados restritos em data/raw/mimic-iv-ecg/ - nao reproduzivel sem acesso.
+  # ---------------------------------------------------------------------------
+  nlp_mimic_eda:
+    wdir: challenge/ai_cardiology
+    cmd: jupyter nbconvert --to notebook --execute --inplace notebooks/nlp_mimic_iv/NB9_eda_nlp_mimic_iv.ipynb
+    deps:
+      - notebooks/nlp_mimic_iv/NB9_eda_nlp_mimic_iv.ipynb
+    outs:
+      - data/processed/nlp/mimic_corpus/:
+          cache: false
+      - data/processed/nlp/mimic_eda_charts/:
+          cache: false
+
+  # ---------------------------------------------------------------------------
+  # STAGE 9 - Extracao de Sintomas MIMIC v2 (NB10)
+  # ---------------------------------------------------------------------------
+  # D1 com 10 chiefcomplaints reais do MIMIC-IV-ED, D2 com 35 regras ACC/AHA.
+  # PRE-REQUISITO: MIMIC-IV-ED 2.2 em data/raw/mimic-iv-ed-2.2/ (restrito).
+  # ---------------------------------------------------------------------------
+  nlp_mimic_symptoms:
+    wdir: challenge/ai_cardiology
+    cmd: jupyter nbconvert --to notebook --execute --inplace notebooks/nlp_mimic_iv/NB10_symptom_extraction.ipynb
+    deps:
+      - notebooks/nlp_mimic_iv/NB10_symptom_extraction.ipynb
+      - data/processed/nlp/mimic_corpus/corpus_mimic_ecg_rotulado_v2.csv
+    outs:
+      - data/processed/nlp/symptom_extraction/:
+          cache: false
+
+  # ---------------------------------------------------------------------------
+  # STAGE 10 - Classificador de Risco MIMIC v2 (NB11)
+  # ---------------------------------------------------------------------------
+  # Pipeline sklearn oficial: TfidfVectorizer(ngram_range=(1,2), max_features=
+  # 1000) + LogisticRegression(C=1.0, class_weight=balanced).
+  # acc=0.96, F1 macro=0.970, ROC-AUC=1.0, FN=0, pkl 9.8KB.
+  # ---------------------------------------------------------------------------
+  nlp_mimic_risk:
+    wdir: challenge/ai_cardiology
+    cmd: jupyter nbconvert --to notebook --execute --inplace notebooks/nlp_mimic_iv/NB11_risk_classifier.ipynb
+    deps:
+      - notebooks/nlp_mimic_iv/NB11_risk_classifier.ipynb
+      - data/processed/nlp/mimic_corpus/corpus_mimic_ecg_rotulado_v2.csv
+    outs:
+      - data/processed/nlp/risk_classification/:
+          cache: false
+
+  # ---------------------------------------------------------------------------
+  # STAGE 11 - MLP ECG MIT-BIH (NB8)
+  # ---------------------------------------------------------------------------
+  # MLP Input(187)->Dense(256,128,64)->Softmax5 sobre o heartbeat MIT-BIH.
+  # Split estratificado (v2): val_accuracy 0.018->0.761 na epoca 1.
+  # Saidas: modelo keras best val_accuracy, TFLite INT8 102.5KB, charts.
+  #
+  # PRE-REQUISITO: dvc pull challenge/ai_cardiology/data/raw/heartbeat.dvc
+  # ---------------------------------------------------------------------------
+  mlp_ecg:
+    wdir: challenge/ai_cardiology
+    cmd: jupyter nbconvert --to notebook --execute --inplace notebooks/mlp_ecg_heartbeat.ipynb
+    deps:
+      - notebooks/mlp_ecg_heartbeat.ipynb
+      - data/raw/heartbeat/                    # requer: dvc pull heartbeat.dvc
+    outs:
+      - models/nb8_mlp_ecg_best.keras:
+          cache: false                         # [GIT OK] ~350KB - entregavel
+      - models/nb8_mlp_ecg_int8.tflite:
+          cache: false                         # [GIT OK] 102.5KB - entregavel
+      - data/processed/fase2/:
+          cache: false                         # [GIT OK] charts, experiment_log
