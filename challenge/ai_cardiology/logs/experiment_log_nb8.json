@@ -1,0 +1,28 @@
+{
+  "notebook": "NB8",
+  "dataset": "MIT-BIH Arrhythmia (shayanfazeli/heartbeat)",
+  "n_train": 87554,
+  "n_test": 21892,
+  "n_features": 187,
+  "n_classes": 5,
+  "class_labels": {
+    "0.0": "Normal (N)",
+    "1.0": "Supraventricular (S)",
+    "2.0": "Ventricular (V)",
+    "3.0": "Fusion (F)",
+    "4.0": "Desconhecido (Q)"
+  },
+  "architecture": "MLP-256-128-64-5",
+  "total_params": 91397,
+  "optimizer": "Adam lr=1e-3",
+  "class_weight": "balanced",
+  "normalization": "global [0,1] + per-sample Z-score",
+  "batch_size": 64,
+  "epochs_trained": 79,
+  "best_val_accuracy": 0.9529,
+  "test_accuracy": 0.9509,
+  "test_f1_macro": 0.8143,
+  "test_f1_weighted": 0.9559,
+  "tflite_size_kb": 102.5,
+  "latency_ms_cpu": 0.036
+}
