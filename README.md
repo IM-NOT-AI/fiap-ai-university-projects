@@ -129,8 +129,212 @@ Lembre-se: nesta fase, não estamos apenas coletando dados, estamos construindo 
 <br>
 
 <details>
-<summary><strong><font size="4">Fase 2 - Em Breve</font></strong></summary>
-<br><br>
+<summary><strong><font size="4">Fase 2 - (11/03/26 - 14/04/26)</font></strong></summary>
+<br>
+
+<p align="justify">
+<strong>Enunciado de atividade:</strong><br><br>
+Nesta fase, o projeto CardioIA irá desafiá-lo um pouco mais: você deverá simular a automatização do diagnóstico com IA - prática amplamente utilizada em centros de diagnóstico modernos, onde algoritmos se tornam os estetoscópios digitais do século XXI.
+</p>
+
+<p align="justify">
+Como equipe, seu objetivo será desenvolver um módulo inteligente capaz de analisar dados clínicos e relatórios médicos, reconhecer sintomas e propor diagnósticos assistidos por IA. Você vai trabalhar com NLP, classificação de texto e análise de vieses a partir do dataset (visto na Fase 1), enfrentando os dilemas reais da Inteligência Artificial aplicada à saúde.
+</p>
+
+<p align="justify">
+No mapa mental a seguir, você poderá ver em que ponto da sua jornada no PBL (Problem Project Learning) sua equipe se encontra. Observe o que está escrito na Fase 2, mas procure também compreender o contexto geral, preparando-se para as próximas fases.
+</p>
+
+<br>
+
+<p align="justify">
+<strong>Objetivo geral dessa atividade:</strong><br><br>
+Você irá aplicar os conteúdos de algumas disciplinas desta fase para desenvolver soluções práticas de diagnóstico automatizado. A ideia aqui é mostrar como um código "simples" aliado com dados bem-organizados, pode gerar soluções básicas que se aproximam do funcionamento de sistemas reais utilizados em hospitais e centros de tratamentos.
+</p>
+
+<p align="justify">
+Isso inclui interpretar pequenos textos médicos, identificar sintomas e relacioná-los a doenças, utilizando estruturas simples. Também faz parte da tarefa, o treinamento de um modelo de IA capaz de prever o risco de um paciente com base em frases curtas. E o melhor: todo processo será feito por você e seu grupo, utilizando sua capacidade intelectual e criatividade.
+</p>
+
+<p align="justify">
+Ao final dessa fase, você poderá ter construído algo que muitos profissionais que atuam hoje no mercado da área de saúde adorariam ter em mãos. Durante esse processo, você também será estimulado a refletir sobre a qualidade e a justiça dos dados, dando seus primeiros passos como um desenvolvedor de IA responsável, isto é, se preocupando com o tema "governança em dados".
+</p>
+
+<br>
+
+<p align="justify">
+<strong>Atividade detalhada:</strong><br><br>
+<strong>Parte 1 – Frases de sintomas + extração de informações:</strong>
+</p>
+
+<ul>
+<li>Criar um arquivo <code>.txt</code> com 10 frases completas que simulem pequenas descrições de sintomas relatados por pacientes. As frases devem conter informações como o que o paciente sente, quando começou e como os sintomas afetam sua rotina (por exemplo: "Há dois dias estou com uma dor no peito que piora quando faço esforço físico", "Sinto cansaço constante há uma semana, mesmo depois de descansar").</li>
+<li>Criar uma estrutura simples de associação entre sintomas e doenças usando uma planilha ou um arquivo <code>*.csv</code>. A ideia é montar um mapa de conhecimento que relacione palavras ou expressões comuns (sintomas relatados pelos pacientes) com possíveis diagnósticos. Por exemplo:
+  <ul>
+    <li>"dor no peito", "aperto no tórax" → Infarto.</li>
+    <li>"cansaço constante", "fadiga" → Insuficiência Cardíaca.</li>
+    <li>"falta de ar", "dificuldade para respirar" → Angina.</li>
+  </ul>
+  Use uma estrutura de colunas como: Sintoma 1 | Sintoma 2 | Doença Associada.<br>
+  Essa atividade pode ajudar a entender como sistemas inteligentes estruturam informações para auxiliar em diagnósticos médicos.<br>
+  Quanto mais linhas o seu arquivo <code>.csv</code> tiver, melhor será o seu processo de decisão e classificação de doenças.
+</li>
+<li>Utilize um código Python para ler as frases do arquivo <code>.txt</code>, identificar os sintomas com base nessas expressões e sugerir um possível diagnóstico com base no mapa de conhecimento. As 10 frases representam uma estrutura inicial e funcional para 10 diagnósticos simples de pacientes diversos, desde que as frases sejam exemplos variados e bem elaborados. Essa quantidade de frases é suficiente para testar a extração de sintomas com base no mapa de conhecimento e para simular o funcionamento de um sistema básico de apoio ao diagnóstico. Lembre-se de que quanto mais claras e diversificadas forem as frases, melhor será o desempenho da lógica de identificação e sugestão de diagnóstico.</li>
+</ul>
+
+<p align="justify">
+<strong>Entregáveis:</strong>
+</p>
+<ul>
+<li>Arquivo <code>.txt</code> com 10 frases completas simulando descrições de sintomas relatados por pacientes.</li>
+<li>Planilha ou arquivo <code>.csv</code> com o mapa de conhecimento (associação entre sintomas e possíveis diagnósticos).</li>
+<li>Código Python (<code>.ipynb</code> ou <code>.py</code>) que faz a leitura do arquivo de frases, identifica os sintomas e sugere diagnósticos com base na ontologia.</li>
+</ul>
+
+<br>
+
+<p align="justify">
+<strong>Parte 2 – Classificador básico de texto:</strong><br><br>
+Aqui, você irá desenvolver um classificador básico de texto que analisa frases com sintomas e classifica o nível de risco como "baixo risco" ou "alto risco". Essa tarefa simula o funcionamento de sistemas automatizados utilizados na triagem clínica, que ajudam a priorizar atendimentos com base na gravidade relatada.
+</p>
+
+<ul>
+<li>Montar uma pequena base simulada no formato <code>.csv</code>, contendo frases médicas já rotuladas com o nível de risco. Exemplo: <code>frase,situacao</code>.<br>
+"sinto dor no peito e falta de ar",alto risco<br>
+"tive um leve incômodo nas costas",baixo risco</li>
+<li>Aplicar o método TF-IDF para transformar essas frases em vetores numéricos que possam ser entendidos pelo algoritmo de Machine Learning.</li>
+<li>Escolher um modelo de classificação simples (como Decision Tree, Logistic Regression ou outro do Scikit-learn) para treinar seu sistema e testá-lo com os dados.</li>
+<li>Avaliar o desempenho do modelo com base na acurácia e em como ele se comporta diante de frases de risco diferente, observando eventuais padrões ou distorções que possam surgir nos resultados. Esta etapa do projeto marca um ponto-chave da sua jornada: você estará reproduzindo, com ferramentas acessíveis, a lógica por trás de sistemas reais utilizados em triagens clínicas.</li>
+</ul>
+
+<p align="justify">
+<strong>Entregáveis:</strong>
+</p>
+<ul>
+<li>Arquivo <code>.csv</code> com frases e rótulos.</li>
+<li>Código <code>.ipynb</code> com TF-IDF, classificação e avaliação do modelo.</li>
+<li>Repositório público no GitHub contendo todos os arquivos do projeto da Fase 2.</li>
+<li>Um vídeo de até 4 minutos demonstrando o funcionamento completo da solução (pode ser com gravação de tela e explicação por voz ou legenda). O vídeo deve ser postado no YouTube como "não listado" e o link deve ser incluído no README do repositório no GitHub.</li>
+</ul>
+
+<br>
+
+<p align="justify">
+<strong>Critérios de Avaliação (10 pontos totais):</strong>
+</p>
+
+| Critério | Pontos |
+|---|---|
+| Relatos e mapa de conhecimento organizados | 2 |
+| Código de extração de informações funcional | 2 |
+| Dataset simples criado corretamente | 1 |
+| Classificador treinado e testado corretamente | 2 |
+| Documentação clara e repositório público no GitHub com README completo | 1 |
+| Vídeo de demonstração no YouTube (não listado) com link incluído no GitHub | 2 |
+
+<br>
+
+<p align="justify">
+<strong>Ir Além 1 – Criando a interface do CardioIA:</strong><br><br>
+Nesta atividade, você será responsável por construir apenas a interface do CardioIA. A proposta é criar um pequeno portal responsivo em React + Vite, que simule a visualização de dados de pacientes, agendamentos e um painel com métricas simples. Os dados utilizados devem ser simulados (via arquivos JSON locais ou API pública de exemplo), e nenhuma integração real com back-end será necessária. O foco é aplicar os conceitos aprendidos em Front-End, com destaque para Hooks avançados e Context API.
+</p>
+
+<p align="justify">
+Você e seu grupo deverão criar uma aplicação em React com Vite que contenha:
+</p>
+<ul>
+<li>Autenticação simulada via Context API (com JWT fake no localStorage);</li>
+<li>Listagem de pacientes utilizando API fake (como JSONPlaceholder) ou base simulada;</li>
+<li>Formulário de agendamento de consultas com uso de <code>useState</code> e <code>useReducer</code>;</li>
+<li>Dashboard simples com contagem de pacientes e consultas agendadas;</li>
+<li>Proteção de rotas com AuthContext (só mostrar dados se o usuário estiver logado);</li>
+<li>Estilização com CSS Modules ou Styled Components.</li>
+</ul>
+
+<p align="justify">
+<strong>Objetivo:</strong><br>
+Construir uma aplicação front-end interativa que simule, de forma visual, a rotina de um portal de diagnóstico em cardiologia, utilizando React e seguindo boas práticas de componentização, navegação, autenticação simulada e manipulação de estado.
+</p>
+
+<p align="justify">
+<strong>Entregáveis:</strong>
+</p>
+<ul>
+<li>Repositório público no GitHub com o nome: <code>nome-do-grupo-cardioia-portal</code>.</li>
+<li>Código-fonte completo com as pastas: <code>/contexts</code>, <code>/components</code>, <code>/services</code>, <code>/pages</code>.</li>
+<li>README.md com instruções de instalação e execução.</li>
+<li>Lista com nome completo e RM dos integrantes.</li>
+<li>Um vídeo de até 4 minutos demonstrando o funcionamento completo da solução (pode ser com gravação de tela e explicação por voz ou legenda). O vídeo deve ser postado no YouTube como "não listado" e o link deve ser incluído no README do repositório no GitHub.</li>
+</ul>
+
+<p align="justify">
+<strong>Critérios de Avaliação:</strong>
+</p>
+<ul>
+<li>Autenticação funcional e proteção de rotas.</li>
+<li>Consumo de API e controle de estado.</li>
+<li>Uso correto de Hooks (<code>useState</code>, <code>useEffect</code>, <code>useContext</code>).</li>
+<li>Componentização e organização do projeto.</li>
+<li>Estilização responsiva e usabilidade.</li>
+</ul>
+
+<br>
+
+<p align="justify">
+<strong>Ir Além 2 – Diagnóstico visual em cardiologia com rede neural:</strong><br><br>
+Nesta atividade, você irá aplicar uma Rede Neural Artificial (MLP) para classificar imagens médicas relacionadas a diagnósticos cardiológicos. A proposta é utilizar uma base de dados pública com imagens de eletrocardiogramas (ECG) e treinar um modelo para identificar se o sinal indica um ritmo cardíaco normal ou alguma anomalia.
+</p>
+
+<p align="justify">
+Essa atividade amplia os conceitos do CardioIA para o campo do diagnóstico visual, reforçando a importância da IA na triagem automatizada de pacientes e no apoio à decisão médica.
+</p>
+
+<p align="justify">
+<strong>Objetivo:</strong>
+</p>
+<ul>
+<li>Utilizar um dataset público de imagens de ECG com classificação binária (normal vs. anormal).</li>
+<li>Pré-processar as imagens e convertê-las para um formato compatível com redes neurais simples (por exemplo: redimensionar e converter para tons de cinza).</li>
+<li>Criar uma rede neural do tipo MLP (Perceptron Multicamadas) usando Keras.</li>
+<li>Treinar e testar o modelo com base nos dados.</li>
+<li>Avaliar a acurácia do classificador.</li>
+</ul>
+
+<p align="justify">
+<strong>Recomendação de Dataset:</strong><br>
+<a href="https://www.kaggle.com/datasets/shayanfazeli/heartbeat">https://www.kaggle.com/datasets/shayanfazeli/heartbeat</a>
+</p>
+
+<p align="justify">
+<strong>Entregáveis:</strong>
+</p>
+<ul>
+<li>Notebook (<code>.ipynb</code>) com todo o código comentado e funcional.</li>
+<li>Repositório público no GitHub contendo o notebook, exemplos de imagens e um README explicativo.</li>
+<li>Um vídeo de até 4 minutos demonstrando o funcionamento do projeto, explicando o código, os dados e os resultados. O vídeo deve ser postado no YouTube como "não listado" e o link incluído no README do Git.</li>
+</ul>
+
+<p align="justify">
+<strong>Critérios de Avaliação:</strong>
+</p>
+<ul>
+<li>Pré-processamento correto das imagens.</li>
+<li>Implementação funcional da rede MLP com Keras.</li>
+<li>Treinamento e avaliação com resultados apresentados.</li>
+<li>Organização e clareza do código no notebook.</li>
+</ul>
+
+<br>
+
+<p align="justify">
+<strong>Mensagem final:</strong><br>
+Treinar e interpretar um modelo de IA para prever riscos é uma tarefa que, embora simples na superfície, exige olhar analítico e responsabilidade. Ao dominar essa etapa, você desenvolve habilidades cada vez mais valorizadas no mercado - habilidades que poucos dominam com uma visão crítica e aplicada. Siga em frente nesta jornada com autonomia e criatividade. É assim que grandes cientistas surgem.
+</p>
+
+<p align="center">
+  <img src="./challenge/ai_cardiology/docs/assets/readme/enunciado_fase2_pt1.png" alt="enunciado-fase2-pt1" width="1000">
+</p>
+
 </details>
 
 <br>
@@ -1237,8 +1441,717 @@ dvc dag
 <br>
 
 <details>
-<summary><strong><font size="4">Fase 2 - Em Breve</font></strong></summary>
-<br><br>
+<summary><strong><font size="4">Fase 2 - (11/03/26 - 14/04/26)</font></strong></summary>
+<br>
+
+<p align="justify">
+Na Fase 2, o Cardio-Edge-AI avança da camada de <strong>aquisição e preparação de dados</strong> (Fase 1) para a camada de <strong>inteligência clínica aplicada</strong>: o sistema passa a interpretar sintomas em linguagem natural, extrair padrões diagnósticos do corpus clínico e classificar automaticamente o nível de risco de cada paciente. Toda a infraestrutura de dados construída na Fase 1, o corpus NLP de 26 textos clínicos PT-BR, o <code>edge_trigger_lookup.json</code>, o pipeline TF-IDF de 6.276 dimensões e os 6.665 Gêmeos Digitais do PTB-XL com seus rótulos diagnósticos, torna-se o ponto de entrada direto dos módulos desta fase.
+
+<p align="justify">
+A Fase 2 percorreu duas iterações técnicas. A primeira (NB6/NB7) partiu do corpus PT-BR da Fase 1 e atingiu F1 = 1,000 - resultado que acionou imediatamente o protocolo de auditoria de qualidade: Jaccard de vocabulário entre classes = 0,021 (threshold saudável > 0,15), indicando leakage de domínio. O modelo havia aprendido o <em>estilo de escrita dos documentos</em> (acadêmico-normativo vs. clínico-narrativo) em vez do conteúdo diagnóstico. A segunda iteração (NB9/NB10/NB11) pivotou para o <strong>MIMIC-IV-ECG</strong> (800.035 ECGs, PhysioNet), cujos laudos são todos gerados pelo mesmo algoritmo automatizado GE MUSE - vocabulário idêntico para alto e baixo risco, Jaccard = 0,224. O resultado: F1 = 0,970, FN = 0, modelo de 9,8 KB pronto para deploy no Raspberry Pi 5.
+</p>
+</p>
+
+<br>
+
+<details>
+<summary><strong>Status dos Entregáveis - Fase 2</strong></summary>
+<br>
+
+<p align="justify"><strong>Parte 1: Frases de sintomas e extração de informações</strong></p>
+
+| Entregável | Status | Artefato |
+|---|---|---|
+| Arquivo `.txt` com 10 frases completas de pacientes | Concluído | `sintomas_pacientes.txt` (MI, STTC, CD, HYP, NORM) |
+| Arquivo `.csv` com mapa de conhecimento (Sintoma 1, Sintoma 2, Doença Associada) | Concluído | `mapa_sintomas_doencas.csv` (929 linhas, 7 colunas) |
+| Código Python `.ipynb` que lê frases, identifica sintomas e sugere diagnóstico | Concluído | `symptom_extraction.ipynb` (72 células, função `sugerir_diagnostico()`) |
+
+<br>
+
+<p align="justify"><strong>Parte 2: Classificador básico de texto</strong></p>
+
+| Entregável | Status | Artefato |
+|---|---|---|
+| Arquivo `.csv` com frases e rótulos `alto risco` / `baixo risco` | Concluído | `frases_risco_rotuladas.csv` v1: 80 frases PT-BR (NB7) · v2: 100 frases MIMIC (NB11) |
+| Código `.ipynb` com TF-IDF, classificação e avaliação do modelo | Concluído | `risk_classifier.ipynb` (v1, F1=1,000 - leakage) + `NB11_risk_classifier.ipynb` (v2, F1=0,970, FN=0) |
+| Repositório público no GitHub com todos os arquivos da Fase 2 | Pendente | Fazer commit e push |
+| Vídeo no YouTube não listado (até 4 min) com link no README | Pendente | Gravar screencast do NB6/NB11 em execução |
+
+<br>
+
+<p align="justify"><strong>NB9/NB10/NB11 - Iteração MIMIC-IV (corpus sem leakage de domínio)</strong></p>
+
+| Entregável | Status | Artefato |
+|---|---|---|
+| NB9 - EDA do corpus MIMIC-IV-ECG | Concluído | `notebooks/nlp_mimic_iv/NB9_eda_nlp_mimic_iv.ipynb` (1.193 frases, Jaccard=0,224) |
+| NB10 - Extração de sintomas v2 (MIMIC-IV-ED) | Concluído | `notebooks/nlp_mimic_iv/NB10_symptom_extraction.ipynb` (D1 real, D2 35 regras ACC/AHA) |
+| NB11 - Classificador de risco v2 (laudos GE MUSE) | Concluído | `notebooks/nlp_mimic_iv/NB11_risk_classifier.ipynb` (acc=0,96, ROC-AUC=1,0, FN=0, 9,8 KB) |
+
+<br>
+
+<p align="justify"><strong>Ir Além 1: Portal React + Vite</strong></p>
+
+| Entregável | Status | Artefato |
+|---|---|---|
+| Código-fonte com `/contexts`, `/components`, `/services`, `/pages` | Concluído | `frontend/cardioia-portal/src/` (25 arquivos) |
+| Autenticação via Context API com JWT fake no localStorage | Concluído | `AuthContext.jsx`, `authService.js` |
+| Listagem de pacientes com base simulada | Concluído | `PatientsPage.jsx`, `mockData.js` |
+| Formulário de agendamento com `useState` e `useReducer` | Concluído | `AppointmentsPage.jsx` (reducer SET_FIELD, SET_ERROR, RESET) |
+| Dashboard com contagem de pacientes e consultas agendadas | Concluído | `DashboardPage.jsx` (4 stat cards, gráfico CSS puro) |
+| Proteção de rotas com AuthContext | Concluído | `PrivateRoute.jsx` (Outlet react-router v6) |
+| Estilização com CSS Modules | Concluído | CSS Modules em todos os componentes |
+| `README.md` do portal com instruções e lista de integrantes | Pendente | Criar `frontend/cardioia-portal/README.md` |
+| Repositório público no GitHub com nome `nome-do-grupo-cardioia-portal` | Pendente | Publicar ou referenciar no README principal |
+| Vídeo no YouTube não listado (até 4 min) com link no README | Pendente | Gravar screencast do portal |
+
+<br>
+
+<p align="justify"><strong>Ir Além 2: MLP com Keras</strong></p>
+
+| Entregável | Status | Artefato |
+|---|---|---|
+| Notebook `.ipynb` com código comentado e funcional | Concluído | `NB8_mlp_ecg_heartbeat.ipynb` (27 células, TFLite INT8, fallback sintético) |
+| Pré-processamento correto das amostras | Concluído | Normalização Min-Max por amostra, Seção 4 do NB8 |
+| Rede MLP com Keras, treinamento e avaliação com resultados apresentados | Concluído | `build_mlp_cardio()`, ~65K parâmetros, acurácia, F1, AUC-ROC, matriz de confusão |
+| Vídeo no YouTube não listado (até 4 min) com link no README | Pendente | Gravar screencast do NB8 |
+
+</details>
+
+<br>
+
+<details>
+<summary><strong>Estrutura de Diretórios - Novos Artefatos da Fase 2</strong></summary>
+<br>
+
+```
+challenge/ai_cardiology/
+├── notebooks/
+│   ├── ptblxl_eda.ipynb                         <- Fase 1, NB1
+│   ├── holter_iot_data_simulation.ipynb          <- Fase 1, NB2
+│   ├── ptbxl_signal_vision_eda.ipynb             <- Fase 1, NB3
+│   ├── nlp_data_pruning.ipynb                    <- Fase 1, NB4
+│   ├── nlp_data_engineer.ipynb                   <- Fase 1, NB5
+│   ├── symptom_extraction.ipynb                  <- Fase 2, Parte 1 v1 PT-BR (72 células)
+│   ├── risk_classifier.ipynb                     <- Fase 2, Parte 2 v1 PT-BR (56 células, F1=1,000 leakage)
+│   ├── mlp_ecg_heartbeat.ipynb                   <- Fase 2, IR Além 2 (NB8)
+│   └── nlp_mimic_iv/                             <- Fase 2, iteração v2 MIMIC-IV
+│       ├── NB9_eda_nlp_mimic_iv.ipynb            <- EDA corpus MIMIC, diagnóstico do leakage
+│       ├── NB10_symptom_extraction.ipynb         <- D1 real MIMIC-IV-ED + D2 35 regras ACC/AHA
+│       ├── NB11_risk_classifier.ipynb            <- D3 + TF-IDF + LogReg, acc=0,96, FN=0
+│       └── README.md                             <- documentação da iteração MIMIC
+│
+├── frontend/
+│   └── cardioia-portal/                          <- Fase 2, IR Além 1
+│       └── src/
+│           ├── contexts/                         <- AuthContext (JWT)
+│           ├── components/                       <- Navbar, Layout, Modal, Toast, PrivateRoute
+│           ├── pages/                            <- Login, Dashboard, Pacientes, Consultas
+│           ├── services/                         <- authService, mockData
+│           └── hooks/                            <- useAuth
+│
+├── data/
+│   └── processed/
+│       ├── ptbxl/                                <- Fase 1 (núcleo)
+│       ├── nlp/                                  <- Fase 1 (corpus) + Fase 2 v1
+│       │   ├── symptom_extraction/               <- Fase 2, Parte 1 v1
+│       │   │   ├── sintomas_pacientes.txt        <- D1 v1 (corpus PT-BR)
+│       │   │   ├── mapa_sintomas_doencas.csv     <- D2 v1 (929 linhas, 7 colunas)
+│       │   │   └── corpus_frases_completo.csv    <- D4 bridge NB7 (sem leakage)
+│       │   ├── risk_classification/              <- Fase 2, Parte 2 v1
+│       │   │   ├── frases_risco_rotuladas.csv    <- D3 v1 (80 frases PT-BR)
+│       │   │   └── model/risk_classifier.pkl     <- modelo v1 (F1=1,000 - leakage)
+│       │   └── mimic_eda_charts/                 <- 11 PNGs do NB9 (diagnóstico leakage)
+│       ├── mimic-iv-ecg/                         <- Fase 2, iteração v2 MIMIC-IV
+│       │   ├── corpus/
+│       │   │   ├── corpus_mimic_ecg_rotulado_v2.csv  <- 1.193 frases (NB9)
+│       │   │   ├── frases_risco_rotuladas.csv         <- D3 v2 (100 frases, NB11)
+│       │   │   └── model/nb11_tfidf_logreg.pkl        <- modelo v2 (acc=0,96, 9,8 KB)
+│       │   └── eda/                              <- charts e corpus intermediário
+│       └── fase2/
+│           └── mlp_ecg/                          <- Fase 2, IR Além 2
+│               ├── best_mlp_cardio.keras         <- modelo Keras (v2 split estratificado)
+│               ├── experiment_log_nb8.json       <- MLOps NB8
+│               ├── model_card_nb8.md             <- documentação NB8
+│               └── charts/                       <- PNGs de avaliação
+│
+├── models/
+│   ├── nb8_mlp_ecg_best.keras                   <- cópia do melhor modelo NB8
+│   └── nb8_mlp_ecg_int8.tflite                  <- TFLite INT8 (102,5 KB, < 1 ms)
+│
+└── logs/
+    ├── experiment_log_nb8.json                   <- MLOps NB8
+    ├── model_card_nb8.md                         <- model card NB8
+    └── ecg_samples/                              <- 15 PNGs de amostras ECG (3 por classe)
+
+entregaveis_fase2/                               <- PACOTE DE ENTREGA PARA A BANCA
+├── README.md                                    <- guia geral de entrega
+├── pbl/
+│   └── README.md                                <- NB6-NB11, D1/D2/D3, narrative de leakage
+├── ir_alem_1/
+│   └── README.md                                <- portal React, instrucoes de execucao
+└── ir_alem_2/
+    └── README.md                                <- NB8, metricas, amostras ECG
+```
+
+</details>
+
+<br>
+
+<details>
+<summary><strong>Parte 1: Frases de Sintomas e Extração de Informações (NB6)</strong></summary>
+<br>
+
+<p align="justify">
+<strong>Objetivo:</strong> implementar um módulo completo de apoio ao diagnóstico que lê frases de sintomas em linguagem natural, identifica as expressões clínicas relevantes usando o léxico construído na Fase 1, sugere a superclasse diagnóstica correspondente e exporta os artefatos de conhecimento para consumo pelo NB7 sem introduzir data leakage.
+</p>
+
+<p align="justify">
+<strong>Por que o projeto já está na frente:</strong> o <code>edge_trigger_lookup.json</code> produzido pelo NB5 já é uma lookup table de termos clínicos de alto valor semântico, extraídos por TF-IDF de 26 textos PT-BR reais (diretrizes SBC, protocolos SUS, bulas ANVISA). O NB6 reutiliza esse artefato diretamente como ontologia de sintomas, sem necessidade de re-treinamento. O corpus real de 26 textos, já higienizado, também serve como fonte das 929 frases clínicas extraídas para o mapa de conhecimento.
+</p>
+
+<p align="justify">
+<strong>Análise Arquitetural do Notebook (72 células):</strong>
+</p>
+
+<ul>
+  <li><strong>Seções 1 a 5: Ingestão e EDA do Corpus.</strong> Carregamento dos 26 <code>.txt</code> higienizados, estatísticas descritivas por categoria (Diretriz, Protocolo, Bula, Relato de Caso, Revisão), distribuição de tokens e hapax legomena. Visualizações: word cloud por superclasse PTB-XL, heatmap de co-ocorrência de sintomas.</li>
+
+  <li><strong>Seção 6: SYMPTOM_KEYWORDS e Ontologia Clínica.</strong> Dicionário de 48 termos (28 sintomas primários e 20 qualificadores de intensidade e localização) derivados diretamente dos top stems do <code>edge_trigger_lookup.json</code>. Mapeamento por superclasse PTB-XL com pesos TF-IDF herdados do NB5. Lógica de Matching por regex com Stemming RSLP para capturar flexões morfológicas em PT-BR ("dores", "doendo", "doeu" convergindo para o stem "dor").</li>
+
+  <li><strong>Seção 7: D1 - <code>sintomas_pacientes.txt</code>.</strong> Geração e salvamento de 10 frases clínicas estruturadas, cobrindo as 5 superclasses PTB-XL (2 frases MI, 2 STTC, 2 CD, 2 HYP, 2 NORM). Cada frase descreve início, localização, irradiação e impacto funcional dos sintomas, no formato compatível com o que um sistema real de triagem receberia via chatbot ou formulário de pré-consulta.</li>
+
+  <li><strong>Seção 8: D2 - <code>mapa_sintomas_doencas.csv</code>.</strong> Mapa de conhecimento com 929 linhas e 7 colunas: <code>Sintoma_1</code>, <code>Sintoma_2</code>, <code>Doenca_Associada</code>, <code>Superclasse_PTB-XL</code>, <code>Risco</code>, <code>Trigger_Score</code> e <code>Fonte_Corpus</code>. O Trigger_Score herda o peso TF-IDF do <code>edge_trigger_lookup.json</code>, tornando o mapa uma extensão direta da engenharia semântica da Fase 1.</li>
+
+  <li><strong>Seções 9 e 10: Extração de Sintomas e Métricas de Cobertura.</strong> Pipeline de extração sobre as 10 frases do D1 com taxa de sintomas detectados por frase, distribuição de Trigger_Scores e análise de falsos negativos (sintomas presentes mas não mapeados). Gráficos 1 a 10 salvos em <code>charts/</code>.</li>
+
+  <li><strong>Seção 11.2: Sistema de Sugestão de Diagnóstico.</strong> Função <code>sugerir_diagnostico(frase, df_mapa_ref, top_k=3)</code> que aplica score composto (n_sintomas_match + Trigger_Score × 0,1) sobre o mapa de conhecimento para ranquear as top-3 hipóteses diagnósticas por frase. A confiança relativa entre candidatos é normalizada para 100%. Gráfico 11: barras horizontais de confiança top-1 e gráfico de score acumulado top-3. Salvo como <code>chart11_diagnostico_sugestao.png</code>.</li>
+
+  <li><strong>Seção 12: D4 - <code>corpus_frases_completo.csv</code> (Bridge NB7).</strong> Exportação de 929 frases clínicas extraídas do corpus real, <strong>sem a coluna <code>Doenca_Associada</code></strong>. Esta é a chave arquitetural do pipeline: o NB7 aprenderá padrões linguísticos de risco sem nunca ver o nome da doença durante o treinamento, eliminando o data leakage que tornaria a acurácia artificialmente perfeita (100%), mas clinicamente inútil.</li>
+</ul>
+
+<br>
+
+**Entradas consumidas:**
+- `data/processed/nlp/parsed_txt/` - 26 textos clínicos higienizados (Fase 1)
+- `data/processed/nlp/cleaned/edge_trigger_lookup.json` - Top-10 termos por documento com pesos TF-IDF (Fase 1)
+
+**Saídas produzidas:**
+- `data/processed/nlp/symptom_extraction/sintomas_pacientes.txt` - D1: 10 frases de pacientes
+- `data/processed/nlp/symptom_extraction/mapa_sintomas_doencas.csv` - D2: 929 linhas, 7 colunas
+- `data/processed/nlp/symptom_extraction/corpus_frases_completo.csv` - D4: 929 frases sem Doenca_Associada
+- `data/processed/nlp/symptom_extraction/charts/` - 11 PNGs de auditoria
+
+<br>
+
+**Alinhamento com a arquitetura do projeto:**
+
+| Superclasse PTB-XL | Sintomas representativos no mapa |
+|---|---|
+| MI (Infarto do Miocárdio) | dor no peito, aperto no tórax, irradiação para o braço esquerdo, diaforese |
+| STTC (Isquemia ST-T) | falta de ar ao esforço, dor em queimação retroesternal, angina estável |
+| CD (Distúrbio de Condução) | palpitações, pulso irregular, síncope, pré-síncope |
+| HYP (Hipertrofia Ventricular) | cansaço constante, fadiga, dispneia ao repouso, edema de membros |
+| NORM (Normal) | sem sintomas, exame de rotina, check-up preventivo |
+
+</details>
+
+<br>
+
+<details>
+<summary><strong>Parte 2: Classificador Básico de Texto com TF-IDF e ML (NB7)</strong></summary>
+<br>
+
+<p align="justify">
+<strong>Objetivo:</strong> treinar e avaliar um sistema completo de classificação binária de risco clínico (alto risco vs. baixo risco) a partir de frases médicas vetorizadas com TF-IDF, incorporando boas práticas de MLOps, segurança clínica por otimização de threshold, rastreabilidade de experimentos e governança de IA responsável.
+</p>
+
+<p align="justify">
+<strong>Por que o projeto já está na frente:</strong> o NB6 exportou o <code>corpus_frases_completo.csv</code> sem a coluna de diagnóstico, criando uma fonte de dados limpa para treinamento. O vocabulário clínico do <code>edge_trigger_lookup.json</code> da Fase 1 orienta a seleção de features. A estratégia de rotulagem é derivada diretamente dos rótulos diagnósticos do PTB-XL (Fase 1), garantindo que o modelo de risco seja coerente com o ground truth clínico da plataforma.
+</p>
+
+<p align="justify">
+<strong>Análise Arquitetural do Notebook (56 células):</strong>
+</p>
+
+<ul>
+  <li><strong>Seções 1 a 5: D3 e Baseline.</strong> Construção programática do <code>frases_risco_rotuladas.csv</code> com 80 frases e 40 por classe, estratificadas por superclasse dentro do alto risco (10 MI, 10 STTC, 10 CD, 10 HYP). EDA do D3: distribuição léxica, hapax e comprimento médio. Split estratificado 70/30. Três modelos baseline comparados: Logistic Regression, LinearSVC e Random Forest.</li>
+
+  <li><strong>Seções 6 a 13: Pipeline sklearn sem Data Leakage.</strong> <code>sklearn.pipeline.Pipeline</code> composto por <code>TfidfVectorizer</code> e classificador. O TF-IDF é ajustado exclusivamente nos dados de treino e apenas aplicado no teste, eliminando contaminação de vocabulário. StratifiedKFold 5-fold, métrica F1-macro. Relatório de classificação, matriz de confusão, análise de erros (FP e FN), feature importance via coeficientes LR e validação final com as 10 frases do <code>sintomas_pacientes.txt</code>.</li>
+
+  <li><strong>Seção 14: GridSearchCV com 45 combinações.</strong> Busca exaustiva sobre o espaço de hiperparâmetros:
+    <ul>
+      <li><code>tfidf__max_features</code>: [200, 500, 1000]</li>
+      <li><code>tfidf__ngram_range</code>: [(1,1), (1,2), (1,3)]</li>
+      <li><code>clf__C</code>: [0.1, 0.5, 1.0, 5.0, 10.0]</li>
+    </ul>
+    Heatmap C × ngram e barras top-20 features salvos como <code>chart6_gridsearch.png</code>. O modelo <code>best_pipe_final</code> substitui o baseline para todas as avaliações subsequentes.
+  </li>
+
+  <li><strong>Seção 15: Otimização de Threshold para Segurança Clínica.</strong> A acurácia não é a métrica correta para triagem médica. Um Falso Negativo (paciente alto risco classificado como baixo risco) tem custo assimétrico infinitamente maior que um Falso Positivo. Varredura de threshold de 0,05 a 0,95 sobre a curva Precision-Recall, com critério de maximizar Precisão para alto risco sujeito a <strong>Recall maior ou igual a 0,95</strong>. O <code>optimal_threshold.json</code> é salvo como artefato de produção para o Raspberry Pi 5. Gráfico com 3 painéis: curva PR, Recall/Precisão/F1 por threshold e trade-off FN vs FP.</li>
+
+  <li><strong>Seção 16: Bootstrap CI com 1.000 reamostras.</strong> Intervalos de Confiança de 95% por percentil para 5 métricas: acurácia, F1 macro, F1 alto risco, F1 baixo risco e AUC-ROC. Histogramas de distribuição bootstrap com forest plot de CI95 e marcadores de média. Permite reportar resultados com rigor estatístico mesmo com dataset pequeno (80 frases).</li>
+
+  <li><strong>Seção 17: Governança e IA Responsável.</strong> Análise em 3 dimensões: distribuição de erros por superclasse para detectar viés de representação, representatividade por tipo de documento do corpus (Diretriz, Bula, Relato) e checklist de governança binário com os seguintes pontos:
+    <ul>
+      <li>Dados balanceados 50/50 por classe</li>
+      <li>Ausência de label leakage (corpus sem Doenca_Associada)</li>
+      <li>class_weight=balanced no treinamento</li>
+      <li>Pipeline evita data leakage no TF-IDF</li>
+      <li>Threshold otimizado para segurança clínica (Recall maior ou igual a 0,95)</li>
+    </ul>
+  </li>
+
+  <li><strong>Seção 18: MLOps e Rastreabilidade.</strong> <code>experiment_log.json</code> com run_id, timestamp, hashes MD5 dos dados, parâmetros do pipeline, todas as métricas e status de governança. <code>model_card.md</code> auto-gerado com casos de uso, arquitetura, tabela de métricas com CI95, limitações e checklist de governança. Ambos versionáveis como artefatos de produção no DVC.</li>
+
+  <li><strong>Seção 19: Tabela de Convergência Final.</strong> Mapeamento dos 7 estágios do pipeline de ponta a ponta, dos 5 artefatos exportados e da integração com o ecossistema Cardio-Edge-AI (inferência assíncrona no Raspberry Pi 5).</li>
+</ul>
+
+<br>
+
+**Entradas consumidas:**
+- `data/processed/nlp/symptom_extraction/corpus_frases_completo.csv` - D4 bridge sem data leakage (NB6)
+- `data/processed/nlp/cleaned/edge_trigger_lookup.json` - vocabulário clínico de referência (Fase 1)
+
+**Saídas produzidas:**
+- `data/processed/fase2/nlp/risk_classification/frases_risco_rotuladas.csv` - D3: 80 frases rotuladas
+- `model/risk_classifier.pkl` e `tfidf_vectorizer.pkl` - modelos serializados
+- `optimal_threshold.json` - threshold de produção para o Raspberry Pi 5
+- `experiment_log.json` e `model_card.md` - artefatos MLOps
+- `charts/` - 9 PNGs de avaliação (chart1 a chart9)
+
+<br>
+
+**Estratégia de rotulagem derivada do PTB-XL:**
+
+| Superclasse PTB-XL | Risco atribuído | Justificativa clínica |
+|---|---|---|
+| MI | alto risco | evento agudo, mortalidade imediata sem intervenção |
+| HYP | alto risco | remodelamento cardíaco progressivo, risco de ICC e morte súbita |
+| STTC | alto risco | isquemia ativa, janela pré-infarto, intervenção urgente |
+| CD | alto risco | bloqueios AV e de ramo, risco de parada cardíaca |
+| NORM | baixo risco | sem patologia detectada, acompanhamento de rotina |
+| INCONCLUSIVO | baixo risco | dado insuficiente para alerta, coleta complementar necessária |
+
+</details>
+
+<br>
+
+<details>
+<summary><strong>Descoberta de Leakage de Domínio e Pivô para MIMIC-IV (NB9/NB10/NB11)</strong></summary>
+<br>
+
+<p align="justify">
+<strong>O problema: F1 = 1,000 é um alarme, não uma conquista.</strong><br>
+O NB7 reportou F1 = 1,000 no conjunto de teste. Em NLP clínico, acurácia perfeita com um dataset pequeno é a primeira evidência de <em>data leakage</em>. A auditoria revelou a causa raiz: o corpus PT-BR da Fase 1 misturava dois tipos de documentos com estilos de escrita radicalmente distintos:
+</p>
+
+<ul>
+  <li><strong>Alto risco:</strong> textos de diretrizes SBC, protocolos SUS e bulas ANVISA - escrita normativo-acadêmica, vocabulário técnico padronizado, estrutura de seções.</li>
+  <li><strong>Baixo risco:</strong> relatos de casos clínicos e revisões acadêmicas - escrita narrativa, vocabulário clínico-descritivo, variações de estilo por autor.</li>
+</ul>
+
+<p align="justify">
+O modelo havia aprendido o <strong>estilo do documento</strong>, não o conteúdo diagnóstico. A métrica objetiva: <strong>Jaccard de vocabulário entre classes = 0,021</strong> (limiar saudável: > 0,15). Com apenas 2% de vocabulário compartilhado, qualquer classificador linear trivialmente aprenderia "qual coleção" cada frase veio, sem nenhum aprendizado médico real.
+</p>
+
+<br>
+
+<p align="justify">
+<strong>A solução: corpus com origem homogênea - MIMIC-IV-ECG.</strong><br>
+O <strong>MIMIC-IV-ECG</strong> (800.035 ECGs, MIT - PhysioNet) contém laudos gerados automaticamente pelo algoritmo <strong>GE MUSE</strong> para todos os exames. O vocabulário é determinístico e idêntico para alto risco e baixo risco: o algoritmo usa as mesmas frases para descrever ritmo sinusal normal e para registrar bloqueios de ramo ou ondas T invertidas. Jaccard pós-pivô = <strong>0,224</strong> - dentro do range saudável, forçando o modelo a aprender o conteúdo clínico real.
+</p>
+
+<br>
+
+| Indicador | v1 PT-BR | v2 MIMIC | Limiar saudável |
+|---|---|---|---|
+| F1 reportado | 1,000 | 0,970 | < 0,99 |
+| Jaccard vocabulário entre classes | 0,021 | 0,224 | > 0,15 |
+| Origem do corpus por classe | diferente (diretriz vs relato) | idêntica (GE MUSE) | idêntica |
+| Falsos Negativos | 0 (trivial) | 0 (real) | 0 |
+| Veredicto | Leakage de domínio | Resultado clínico válido | - |
+
+</details>
+
+<br>
+
+<details>
+<summary><strong>NB9: EDA do Corpus MIMIC-IV-ECG (Diagnóstico do Leakage)</strong></summary>
+<br>
+
+<p align="justify">
+<strong>Objetivo:</strong> auditar o corpus PT-BR da Fase 1 para diagnosticar a causa do F1 = 1,000 no NB7, construir um corpus substituto a partir do MIMIC-IV-ECG que elimine o leakage de domínio, e validar matematicamente a homogeneidade do novo corpus antes de qualquer treinamento.
+</p>
+
+<p align="justify">
+<strong>Dataset: MIMIC-IV-ECG</strong><br>
+800.035 ECGs de 161.352 pacientes únicos. Laudos em inglês gerados pelo algoritmo automatizado GE MUSE. Acesso via PhysioNet (credencial CITI Program - restrição HIPAA).
+</p>
+
+<ul>
+  <li><strong>Seção 1 - Ingestão e Overview:</strong> Carregamento de amostra do MIMIC-IV-ECG, análise de cobertura dos campos (report, rhythm, beat). Distribuição temporal dos exames, completude dos laudos GE MUSE. Gráficos <code>sec01_distribuicao_temporal.png</code> e <code>sec02_cobertura_campos.png</code>.</li>
+
+  <li><strong>Seção 2 - Mapeamento PTB-XL → MIMIC:</strong> As 6 superclasses PTB-XL (NORM, MI, STTC, CD, HYP, INCONCLUSIVO) foram mapeadas para padrões regex sobre os laudos GE MUSE usando literatura ACC/AHA. Ex: MI ← <code>acute myocardial infarction|STEMI|ST elevation</code>. Padrões validados contra vocabulário clínico reconhecido.</li>
+
+  <li><strong>Seção 3 - Rotulagem e Balanceamento:</strong> Rotulagem de 1.193 laudos (596 alto_risco, 597 baixo_risco, distribuição praticamente 50/50). Exportação de <code>corpus_mimic_ecg_rotulado_v2.csv</code>. Gráfico <code>sec07_balanceamento.png</code>.</li>
+
+  <li><strong>Seção 4 - Diagnóstico do Leakage (Análise Jaccard):</strong> Cálculo de Jaccard de vocabulário entre as duas classes no corpus PT-BR (0,021) e no MIMIC (0,224). Visualização comparativa em <code>sec06_jaccard_comparacao.png</code> com linha de threshold. Esta seção documenta formalmente o motivo pelo qual o v1 foi substituído.</li>
+
+  <li><strong>Seção 5 - Top-30 Termos por Classe:</strong> Extração dos termos mais discriminativos por TF-IDF para alto_risco e baixo_risco no corpus MIMIC. Gráfico <code>sec03_top30_termos.png</code> - termos como <em>infarction</em>, <em>elevation</em>, <em>block</em> dominam alto risco; <em>normal sinus rhythm</em>, <em>within normal limits</em> dominam baixo risco.</li>
+</ul>
+
+<br>
+
+**Saídas produzidas:**
+- `data/processed/mimic-iv-ecg/corpus/corpus_mimic_ecg_rotulado_v2.csv` - 1.193 laudos rotulados
+- `data/processed/mimic-iv-ecg/corpus/mimic_eda_stats.json` - estatísticas do corpus
+- `data/processed/nlp/mimic_eda_charts/` - 11 PNGs de auditoria
+
+</details>
+
+<br>
+
+<details>
+<summary><strong>NB10: Extração de Sintomas via MIMIC-IV-ED (D1 e D2 v2)</strong></summary>
+<br>
+
+<p align="justify">
+<strong>Objetivo:</strong> produzir os entregáveis D1 (10 frases de sintomas de pacientes) e D2 (mapa de conhecimento Sintoma→Doença) usando fontes clínicas reais em vez de texto sintético, eliminando o viés de corpus artificial presente na v1.
+</p>
+
+<p align="justify">
+<strong>Dataset: MIMIC-IV Emergency Department (MIMIC-IV-ED)</strong><br>
+425.087 internações em pronto-socorro, campo <code>chiefcomplaint</code> com a queixa principal em linguagem natural escrita pelo profissional de saúde na triagem. 191.739 internações com queixa de natureza cardíaca selecionadas via regex sobre o campo.
+</p>
+
+<ul>
+  <li><strong>D1 - 10 frases reais de chiefcomplaint do MIMIC-IV-ED:</strong> Seleção de 2 frases por superclasse PTB-XL (MI, STTC, HYP, CD, NORM) usando mapeamento regex sobre o campo <code>chiefcomplaint</code>. As frases são <em>exatamente como escritas pelos profissionais no momento da triagem</em>, sem paráfrase ou geração sintética. Exemplos: <em>"chest pain with radiation to left arm, sweating"</em> (MI), <em>"palpitations and irregular heartbeat"</em> (CD).</li>
+
+  <li><strong>D2 - 35 regras de associação Sintoma→Doença (ACC/AHA):</strong> Mapa de conhecimento construído sobre literatura ACC/AHA 2023 com 35 pares Sintoma1|Sintoma2|Doença_Associada, cobrindo as 5 superclasses PTB-XL. Pipeline de extração: tokenização por regex <code>[a-z]{3,}</code>, overlap de tokens com os padrões GE MUSE, score de relevância por TF-IDF herdado do NB9.</li>
+
+  <li><strong>Pipeline de extração dos 425.087 stays:</strong> Filtragem por termos cardíacos (regex em inglês sobre chiefcomplaint), normalização de texto (lowercase, remoção de pontuação), tokenização, matching por sobreposição de tokens com os 35 padrões D2, score composto e seleção das top-2 frases por superclasse.</li>
+</ul>
+
+<br>
+
+**Entradas consumidas:**
+- MIMIC-IV-ED `edstays.csv` - 425.087 internações (PhysioNet, acesso restrito)
+- `data/processed/mimic-iv-ecg/corpus/corpus_mimic_ecg_rotulado_v2.csv` - padrões de classe (NB9)
+
+**Saídas produzidas:**
+- D1: 10 chiefcomplaints reais MIMIC-IV-ED (embutido no notebook como saída)
+- D2: 35 regras ACC/AHA (embutido no notebook como saída)
+- `NB10_symptom_extraction.ipynb` - código completo com outputs
+
+</details>
+
+<br>
+
+<details>
+<summary><strong>NB11: Classificador de Risco com Laudos MIMIC-IV (D3 e Modelo v2)</strong></summary>
+<br>
+
+<p align="justify">
+<strong>Objetivo:</strong> treinar e avaliar o classificador binário de risco clínico (alto_risco vs. baixo_risco) usando o corpus MIMIC-IV-ECG com vocabulário homogêneo, produzindo o D3 e o modelo serializado para deploy assíncrono no Raspberry Pi 5.
+</p>
+
+<p align="justify">
+<strong>Dataset D3:</strong> 100 frases selecionadas do <code>corpus_mimic_ecg_rotulado_v2.csv</code> (50 alto_risco, 50 baixo_risco), com split estratificado 80/20. As frases são laudos GE MUSE reais do MIMIC-IV-ECG - mesmo algoritmo, mesmo estilo, conteúdo clínico diferente forçando o modelo a aprender o diagnóstico.
+</p>
+
+<ul>
+  <li><strong>Pipeline sem leakage:</strong> <code>sklearn.pipeline.Pipeline(TfidfVectorizer + LogisticRegression)</code>. O TF-IDF é ajustado exclusivamente nos dados de treino e apenas aplicado no teste. Unigramas e bigramas (1,2), max_features=1000. LogReg C=1,0, class_weight='balanced'.</li>
+
+  <li><strong>Resultados:</strong>
+    <ul>
+      <li>Acurácia de teste: <strong>96,0%</strong></li>
+      <li>F1 macro: <strong>0,970</strong></li>
+      <li>ROC-AUC: <strong>1,000</strong></li>
+      <li>CV 5-fold: <strong>0,970 ± 0,024</strong></li>
+      <li>Falsos Negativos: <strong>0</strong> (nenhum paciente alto risco classificado como baixo risco)</li>
+      <li>Falsos Positivos: <strong>1</strong> ("right bundle branch block" - ambíguo clinicamente)</li>
+      <li>Vocabulário aprendido: <strong>185 termos</strong></li>
+    </ul>
+  </li>
+
+  <li><strong>Modelo serializado:</strong> Pipeline sklearn completo serializado com <code>joblib</code>. Tamanho em disco: <strong>9,8 KB</strong>. Adequado para deploy no Raspberry Pi 5 em inferência assíncrona: quando o Google Coral Edge TPU sinaliza anomalia elétrica (&gt;95% de certeza), o RPi carrega o pkl e classifica o laudo gerado em &lt; 1 ms.</li>
+
+  <li><strong>MLOps:</strong> <code>experiment_log.json</code> com run_id, hash MD5 do D3, parâmetros do pipeline, todas as métricas. Rastreabilidade completa de reprodutibilidade.</li>
+</ul>
+
+<br>
+
+**Entradas consumidas:**
+- `data/processed/mimic-iv-ecg/corpus/corpus_mimic_ecg_rotulado_v2.csv` - 1.193 laudos (NB9)
+
+**Saídas produzidas:**
+- `data/processed/mimic-iv-ecg/corpus/frases_risco_rotuladas.csv` - D3 (100 frases)
+- `data/processed/mimic-iv-ecg/corpus/model/nb11_tfidf_logreg.pkl` - modelo v2 (9,8 KB)
+- `data/processed/mimic-iv-ecg/corpus/mimic_eda_stats.json` - log atualizado
+
+<br>
+
+**Comparação v1 × v2:**
+
+| Critério | NB7 (v1 PT-BR) | NB11 (v2 MIMIC) |
+|---|---|---|
+| Corpus | 26 PDFs PT-BR (SBC/SUS/ANVISA) | 1.193 laudos GE MUSE MIMIC-IV-ECG |
+| D3 | 80 frases | 100 frases |
+| F1 macro | 1,000 (leakage) | 0,970 (real) |
+| Jaccard entre classes | 0,021 | 0,224 |
+| Falsos Negativos | 0 (trivial) | 0 (real) |
+| Tamanho do modelo | ~18 KB | 9,8 KB |
+| Veredicto | Leakage de domínio | Entregável oficial |
+
+</details>
+
+<br>
+
+<details>
+<summary><strong>IR Além 1: Portal CardioIA com React e Vite</strong></summary>
+<br>
+
+<p align="justify">
+<strong>Objetivo:</strong> construir o portal de visualização clínica do Cardio-Edge-AI, uma aplicação React com Vite que simula a rotina de trabalho de um cardiologista no sistema, incluindo autenticação simulada via JWT, listagem de pacientes com diagnósticos ECG, formulário de agendamento de consultas e dashboard com métricas do sistema de IA.
+</p>
+
+<p align="justify">
+<strong>Por que os dados do projeto alimentam diretamente a interface:</strong> os 15 pacientes simulados no portal refletem fielmente as 6 superclasses PTB-XL do projeto (NORM, MI, STTC, CD, HYP, INCONCLUSIVO), com risco derivado pela mesma lógica do NB7 (MI/STTC/CD/HYP = alto risco, NORM = baixo risco). A precisão do modelo exibida no dashboard (96,2%) é o valor real obtido pelo pipeline de Visão Computacional do NB3. O portal não é uma maquete desconectada, é a camada de visualização fiel ao que o sistema produziria em produção.
+</p>
+
+<p align="justify">
+<strong>Stack e organização do projeto:</strong>
+</p>
+
+<ul>
+  <li><strong>Stack:</strong> React 18.3, react-router-dom 6.28 com Outlet e PrivateRoute idiomático, Vite 6, sem dependências externas de UI (sem Material UI, sem Chakra, sem Bootstrap).</li>
+  <li><strong>Autenticação:</strong> <code>AuthContext</code> com <code>login()</code>, <code>logout()</code>, <code>isAuthenticated</code>, <code>token</code> e <code>user</code>. JWT mock gerado com prefixo <code>mock-jwt-</code> mais hash, persistido no <code>localStorage</code> nas chaves <code>cardioia_token</code> e <code>cardioia_user</code>. Validação de expiração simulada por tempo. Sessão restaurada automaticamente ao recarregar a página.</li>
+  <li><strong>Rotas protegidas:</strong> <code>PrivateRoute</code> usando <code>Outlet</code> do react-router-dom v6, com redirecionamento para <code>/login</code> se <code>isAuthenticated === false</code>. Layout com <code>Navbar</code> persistente e <code>main</code> com <code>Outlet</code> para o conteúdo de cada página.</li>
+  <li><strong>Formulário de consultas:</strong> <code>useReducer</code> com reducer <code>formReducer</code> e 3 actions: <code>SET_FIELD</code> (atualiza campo e limpa erro correspondente), <code>SET_ERROR</code> (injeta erros de validação) e <code>RESET</code> (volta ao estado inicial). Validação de campos obrigatórios e data não pode ser no passado. Toast de sucesso ou erro com auto-dismiss de 3 segundos.</li>
+  <li><strong>Dashboard:</strong> 4 stat cards (Total Pacientes, Consultas Hoje, Alertas Alto Risco, Precisão do Modelo 96,2%), tabela dos 5 pacientes com maior risco e gráfico de distribuição de superclasses em CSS puro, sem biblioteca de charts.</li>
+  <li><strong>Listagem de pacientes:</strong> busca por nome com <code>useState</code>, ordenação por qualquer coluna via clique no header, paginação de 8 por página, badges coloridos por superclasse (MI vermelho, STTC laranja, CD amarelo, HYP roxo, NORM verde, INCONCLUSIVO cinza) e modal de detalhes com interpretação clínica do modelo CardioIA.</li>
+  <li><strong>Design system:</strong> CSS Modules em todos os 25 arquivos <code>.jsx</code>. Paleta: <code>--primary: #0d1b2a</code> (navy escuro), <code>--accent: #e63946</code> (vermelho cardíaco), <code>--success: #2a9d8f</code> (teal), fundo <code>#f8f9fa</code>, cards brancos com sombra.</li>
+</ul>
+
+<br>
+
+**Como executar:**
+
+```bash
+cd challenge/ai_cardiology/frontend/cardioia-portal
+npm install
+npm run dev
+# Acesse: http://localhost:5173
+```
+
+**Credenciais de demonstração:**
+
+| Usuário | Senha | Perfil |
+|---|---|---|
+| `cardiologista` | `cardio@123` | Médico |
+| `admin` | `admin@123` | Administrador |
+
+<br>
+
+**Estrutura do código-fonte:**
+
+```
+src/
+├── contexts/AuthContext.jsx          <- JWT, login/logout, localStorage
+├── hooks/useAuth.js                  <- useContext(AuthContext) com guard
+├── services/authService.js           <- mock JWT, persistência
+├── services/mockData.js              <- 15 pacientes PTB-XL, 20 consultas, stats
+├── components/
+│   ├── PrivateRoute/                 <- Outlet guard react-router v6
+│   ├── Layout/                       <- Navbar + main Outlet
+│   ├── Navbar/                       <- dark navy, NavLink ativo, avatar, logout
+│   ├── PatientModal/                 <- detalhes + interpretação IA
+│   └── Toast/                        <- slide-in, auto-dismiss 3s
+└── pages/
+    ├── Login/                        <- form, error state, hint de credenciais
+    ├── Dashboard/                    <- 4 cards, top-5 risco, chart CSS puro
+    ├── Patients/                     <- busca, sort, paginação, badges, modal
+    └── Appointments/                 <- useReducer, validação, Toast, tabela
+```
+
+</details>
+
+<br>
+
+<details>
+<summary><strong>IR Além 2: Diagnóstico Visual de Arritmias com MLP e Keras (NB8)</strong></summary>
+<br>
+
+<p align="justify">
+<strong>Objetivo:</strong> treinar uma Rede Neural Artificial do tipo MLP (Multi-Layer Perceptron) com Keras/TensorFlow para classificar arritmias cardíacas a partir do dataset Kaggle ECG Heartbeat Categorization (MIT-BIH), demonstrando a viabilidade de inferência em tempo real no nó de borda (Raspberry Pi 5 com Google Coral TPU) com latência abaixo de 1 ms.
+</p>
+
+<p align="justify">
+<strong>Complementaridade com o pipeline existente:</strong> enquanto o NB3 treina CNNs sobre espectrogramas 2D de 224×224 pixels para o Google Coral (domínio frequência-tempo, 12 derivações, PTB-XL), o NB8 demonstra que um MLP sobre sinais 1D de 187 pontos captura morfologia temporal diretamente do batimento, com arquitetura muito menor (~65K parâmetros) e adequada para inferência paralela no processador ARM do Raspberry Pi 5. Os dois modelos formam um ensemble multimodal: MLP (1D) e CNN (espectrograma 2D).
+</p>
+
+<p align="justify">
+<strong>Dataset: ECG Heartbeat Categorization (Kaggle/Kachuee et al. 2018):</strong>
+</p>
+
+<ul>
+  <li>Fonte: MIT-BIH Arrhythmia Database, reformatado para 187 timesteps a 125 Hz com zero-padding</li>
+  <li>87.554 amostras de treino e 21.892 de teste</li>
+  <li>5 classes: 0=Normal (83%), 1=Supraventricular (3%), 2=Ventricular (7%), 3=Fusão (1%), 4=Desconhecido (6%)</li>
+  <li>Fallback sintético embutido no notebook: funciona sem o dataset Kaggle para demonstração em ambiente sem internet</li>
+</ul>
+
+<p align="justify">
+<strong>Análise Arquitetural do Notebook (27 células):</strong>
+</p>
+
+<ul>
+  <li><strong>Seções 1 a 3: Configuração, Dados e EDA.</strong> Imports, constantes de reprodutibilidade (SEED=42), paths para <code>data/raw/heartbeat/</code> e <code>data/processed/fase2/mlp_ecg/</code>. Carregamento dos CSVs Kaggle com fallback para gerador sintético estocástico baseado em senoides amortecidas com perfil de distribuição MIT-BIH real. EDA: distribuição de classes com desbalanceamento, morfologia de batimento por classe com offset e boxplot de amplitude média. Gráfico 1 com 3 painéis.</li>
+
+  <li><strong>Seção 4: Pré-processamento.</strong> Normalização Min-Max por amostra individual, com cada batimento mapeado para [0, 1] de forma independente, split estratificado 90/10 para validação e cálculo de <code>class_weight='balanced'</code> para compensar o forte desbalanceamento (classe Normal representa 83% dos dados). Visualização antes e depois da normalização para 3 classes. Gráfico 2 com comparação 2×3 raw vs normalizado.</li>
+
+  <li><strong>Seção 5: Arquitetura MLP.</strong>
+    <ul>
+      <li>Input(187), Dense(256, L2=1e-4), BatchNorm, ReLU, Dropout(0.30)</li>
+      <li>Dense(128, L2=1e-4), BatchNorm, ReLU, Dropout(0.25)</li>
+      <li>Dense(64, L2=1e-4), BatchNorm, ReLU, Dropout(0.20)</li>
+      <li>Dense(5, Softmax) com aproximadamente 65.000 parâmetros totais</li>
+    </ul>
+    Dropout decrescente proporciona maior regularização nas camadas iniciais, onde o espaço de features é maior. BatchNormalization acelera a convergência e atua como regularizador adicional. L2 weight decay penaliza pesos grandes.
+  </li>
+
+  <li><strong>Seção 6: Treinamento.</strong> Adam com learning rate de 3e-4, Sparse Categorical Crossentropy, batch de 256 e máximo de 50 épocas. Callbacks: EarlyStopping com patience de 10 e restore_best_weights, ReduceLROnPlateau com patience de 5 e fator 0,5 e limite de 1e-6, ModelCheckpoint monitorando val_accuracy. Treinamento com class_weight para compensar desbalanceamento. Curvas de loss e acurácia por época com anotação da melhor época. Gráfico 3.</li>
+
+  <li><strong>Seção 7: Avaliação.</strong> Classification report completo com precision, recall e F1 por classe, F1 macro e weighted, AUC-ROC multiclasse OvR. Matriz de confusão normalizada com barras de acurácia por classe e meta de 90%. Distribuição de confiança das predições corretas vs incorretas e confiança média por classe. Gráficos 4 e 5.</li>
+
+  <li><strong>Seção 8: Integração com Cardio-Edge-AI.</strong> Conversão para TFLite INT8 com <code>tf.lite.Optimize.DEFAULT</code>. Benchmark de latência com 10 iterações de warm-up seguidas de 100 medições. Estimativa de throughput em inferências por segundo. Resultado típico: menos de 1 ms de latência, modelo menor que 100 KB, compatível com deploy no Raspberry Pi 5.</li>
+
+  <li><strong>Seções 9 e 10: MLOps e Conclusões.</strong> <code>experiment_log_nb8.json</code> com hash MD5 do conjunto de teste, parâmetros completos, todas as métricas e latência TFLite. <code>model_card_nb8.md</code> auto-gerado com tabela de métricas, limitações e integração no ecossistema Cardio-Edge-AI. Tabela de convergência final mapeando NB3, NB6, NB7 e NB8 no pipeline de ponta a ponta.</li>
+</ul>
+
+<br>
+
+**Entradas consumidas:**
+- `data/raw/heartbeat/mitbih_train.csv` e `mitbih_test.csv` - dataset Kaggle (ou gerador sintético embutido)
+
+**Saídas produzidas:**
+- `data/processed/fase2/mlp_ecg/best_mlp_cardio.keras` - modelo Keras com melhor val_accuracy
+- `data/processed/fase2/mlp_ecg/mlp_cardio_int8.tflite` - TFLite INT8 para inferência na borda
+- `data/processed/fase2/mlp_ecg/experiment_log_nb8.json` - log de experimento com hash MD5
+- `data/processed/fase2/mlp_ecg/model_card_nb8.md` - documentação do modelo
+- `data/processed/fase2/mlp_ecg/charts/` - 5 PNGs de avaliação
+
+</details>
+
+<br>
+
+<details>
+<summary><strong>Síntese de Convergência - Fase 2</strong></summary>
+<br>
+
+<p align="justify">
+A Fase 2 completa o primeiro ciclo de inteligência clínica do Cardio-Edge-AI. Cada módulo foi projetado para se encaixar na arquitetura de borda definida na Fase 1, sem criar dependências paralelas ou reprocessar dados já tratados.
+</p>
+
+<ol>
+  <li><strong><code>symptom_extraction.ipynb</code> (Parte 1).</strong> Reutiliza o <code>edge_trigger_lookup.json</code> do NB5 como base semântica, exporta o mapa de 929 sintomas e o <code>corpus_frases_completo.csv</code> sem data leakage para o NB7. O sistema <code>sugerir_diagnostico()</code> opera em O(1) sobre o mapa, compatível com a latência do Raspberry Pi 5.</li>
+
+  <li><strong><code>risk_classifier.ipynb</code> (Parte 2).</strong> Pipeline TF-IDF com Logistic Regression e threshold otimizado para Recall maior ou igual a 0,95 em alto risco, eliminando Falsos Negativos críticos. Bootstrap CI com 1.000 reamostras para rigor estatístico, checklist de governança e <code>experiment_log.json</code> rastreável. O modelo exportado em <code>.pkl</code> é o candidato para deploy assíncrono no Raspberry Pi 5 quando o Coral TPU sinaliza anomalia na CNN.</li>
+
+  <li><strong>Portal CardioIA (IR Além 1).</strong> Os dados dos 15 pacientes, as superclasses, os badges de risco e a precisão de 96,2% refletem os valores reais do pipeline. Autenticação JWT, rotas protegidas, formulário com <code>useReducer</code> e dashboard com métricas do modelo.</li>
+
+  <li><strong><code>NB8_mlp_ecg_heartbeat.ipynb</code> (IR Além 2).</strong> Arquitetura de ~65K parâmetros, TFLite INT8 menor que 100 KB, latência menor que 1 ms no Raspberry Pi. Complementa a CNN do NB3 em ensemble multimodal: MLP analisa morfologia temporal 1D, CNN analisa distribuição espectral 2D, dois olhares ortogonais sobre o mesmo batimento cardíaco.</li>
+</ol>
+
+<br>
+
+**Ordem de execução dos notebooks na Fase 2:**
+
+**Iteração v1 (PT-BR, referência histórica):**
+
+1. `symptom_extraction.ipynb` - depende de `edge_trigger_lookup.json` e `parsed_txt/` da Fase 1. Gera D1, D2 e D4.
+2. `risk_classifier.ipynb` - depende do D4 gerado pelo NB6. Gera D3 v1, modelo pkl v1. ⚠️ F1=1,000 - leakage diagnosticado.
+
+**Iteração v2 (MIMIC-IV, entregável oficial):**
+
+3. `nlp_mimic_iv/NB9_eda_nlp_mimic_iv.ipynb` - EDA do MIMIC-IV-ECG, diagnóstico do leakage, corpus v2. Requer acesso PhysioNet (credencial CITI).
+4. `nlp_mimic_iv/NB10_symptom_extraction.ipynb` - D1 v2 (chiefcomplaint real) e D2 v2 (35 regras ACC/AHA).
+5. `nlp_mimic_iv/NB11_risk_classifier.ipynb` - D3 v2, TF-IDF + LogReg, acc=0,96, FN=0. Gera `nb11_tfidf_logreg.pkl`.
+
+**Independentes:**
+
+6. `mlp_ecg_heartbeat.ipynb` - independente, consome dataset Kaggle ou gerador sintético embutido.
+7. Portal React - independente de notebooks; executar com `npm install && npm run dev`.
+
+> **Nota MIMIC-IV:** os dados brutos do MIMIC-IV-ECG e MIMIC-IV-ED são de acesso controlado pela PhysioNet (credencial CITI Program obrigatória). Os notebooks NB9/NB10/NB11 contêm outputs completos no repositório, permitindo auditoria sem re-execução.
+
+<br>
+
+| Módulo | Requisito FIAP | Entrada principal | Saída chave | Papel no sistema |
+|---|---|---|---|---|
+| NB6 | Parte 1 v1 | `edge_trigger_lookup.json`, 26 txt | D1 v1, D2 (929 linhas), D4 bridge | Ontologia clínica PT-BR, diagnóstico O(1) |
+| NB7 | Parte 2 v1 | D4 bridge | D3 v1, `risk_classifier.pkl` | Triagem v1 - F1=1,000 (leakage diagnosticado) |
+| NB9 | EDA MIMIC | MIMIC-IV-ECG laudos GE MUSE | 1.193 frases rotuladas, Jaccard=0,224 | Diagnóstico do leakage, corpus v2 |
+| NB10 | Parte 1 v2 | MIMIC-IV-ED chiefcomplaint | D1 v2 real, D2 v2 35 regras ACC/AHA | Extração de sintomas corpus real |
+| NB11 | Parte 2 v2 | 100 frases MIMIC | D3 v2, `nb11_tfidf_logreg.pkl` (9,8 KB) | Triagem v2 - F1=0,970, FN=0 (entregável oficial) |
+| Portal | IR Além 1 | `mockData.js` (dados PTB-XL derivados) | Interface clínica React | Visualização e agendamento |
+| NB8 | IR Além 2 | MIT-BIH 187pts por batimento | MLP TFLite INT8, model card, 15 PNGs ECG | Arritmias 1D em tempo real |
+
+</details>
+
+<br>
+
+<details>
+<summary><strong>Entregáveis - Pasta entregaveis_fase2/</strong></summary>
+<br>
+
+<p align="justify">
+Seguindo o padrão da Fase 1, a pasta <code>entregaveis_fase2/</code> na raiz de <code>last_year/</code> concentra o pacote curado para a banca, organizado nas três subpastas correspondentes às três partes do enunciado.
+</p>
+
+<br>
+
+```
+entregaveis_fase2/
+├── README.md                    ← guia geral: mapa de entregáveis, jornada técnica, submissão
+│
+├── pbl/
+│   └── README.md                ← D1/D2/D3, caminhos exatos, tabelas v1×v2, diagnóstico leakage
+│
+├── ir_alem_1/
+│   └── README.md                ← instrucoes npm, credenciais, estrutura src/, conexão PTB-XL
+│
+└── ir_alem_2/
+    └── README.md                ← arquitetura MLP, pre-processamento v2, metricas, 15 PNGs ECG
+```
+
+<br>
+
+**Mapa de entregáveis → artefatos:**
+
+| Entregável FIAP | Artefato | Caminho no repositório |
+|---|---|---|
+| D1 - 10 frases de sintomas (.txt) | `sintomas_pacientes.txt` (v1 PT-BR) | `challenge/ai_cardiology/data/processed/nlp/symptom_extraction/sintomas_pacientes.txt` |
+| D1 - 10 frases reais (v2 MIMIC) | chiefcomplaints MIMIC-IV-ED | `notebooks/nlp_mimic_iv/NB10_symptom_extraction.ipynb` (output) |
+| D2 - mapa de conhecimento (.csv) | `mapa_sintomas_doencas.csv` (929 linhas) | `challenge/ai_cardiology/data/processed/nlp/symptom_extraction/mapa_sintomas_doencas.csv` |
+| D3 - frases rotuladas (.csv) | `frases_risco_rotuladas.csv` (100 frases) | `challenge/ai_cardiology/data/processed/mimic-iv-ecg/corpus/frases_risco_rotuladas.csv` |
+| Código NLP Parte 1 (.ipynb) | NB6 + NB10 | `notebooks/symptom_extraction.ipynb` + `notebooks/nlp_mimic_iv/NB10_symptom_extraction.ipynb` |
+| Código NLP Parte 2 (.ipynb) | NB7 + NB11 | `notebooks/risk_classifier.ipynb` + `notebooks/nlp_mimic_iv/NB11_risk_classifier.ipynb` |
+| Portal React (.zip / link) | `cardioia-portal` | `challenge/ai_cardiology/frontend/cardioia-portal/` |
+| MLP Keras (.ipynb) | NB8 | `challenge/ai_cardiology/notebooks/mlp_ecg_heartbeat.ipynb` |
+| Amostras ECG (.png) | 15 PNGs | `challenge/ai_cardiology/logs/ecg_samples/` |
+| Modelo pkl (9,8 KB) | `nb11_tfidf_logreg.pkl` | `challenge/ai_cardiology/data/processed/mimic-iv-ecg/corpus/model/nb11_tfidf_logreg.pkl` |
+
+<br>
+
+<blockquote>
+<strong>⚠️ Restrição MIMIC-IV:</strong> Os dados brutos do MIMIC-IV-ECG e MIMIC-IV-ED são de acesso controlado pela PhysioNet (credencial CITI Program). Por protocolo ético e contratual, os arquivos brutos não estão no repositório. Os notebooks NB9/NB10/NB11 contêm outputs completos (células executadas) no repositório GitHub, permitindo auditoria completa sem re-execução.
+</blockquote>
+
+</details>
+
+<br>
+
 </details>
 
 <br>

@@ -1,0 +1,101 @@
+frase,risco
+inferior infarct - age undetermined,alto_risco
+prolonged qt interval,alto_risco
+possible anterior infarct - age undetermined,alto_risco
+left ventricular hypertrophy,alto_risco
+possible inferior infarct - age undetermined,alto_risco
+left bundle branch block,alto_risco
+lvh with secondary repolarization abnormality,alto_risco
+lateral st-t changes may be due to myocardial ischemia,alto_risco
+possible anteroseptal infarct - age undetermined,alto_risco
+possible left ventricular hypertrophy,alto_risco
+possible septal infarct - age undetermined,alto_risco
+extensive st-t changes may be due to myocardial ischemia,alto_risco
+inferior/lateral st-t changes may be due to myocardial ischemia,alto_risco
+lateral t wave changes may be due to myocardial ischemia,alto_risco
+*** consider acute st elevation mi ***,alto_risco
+extensive st-t changes may be due to hypertrophy and/or ischemia,alto_risco
+anteroseptal infarct - age undetermined,alto_risco
+lateral st-t changes may be due to hypertrophy and/or ischemia,alto_risco
+inferior/lateral st-t changes may be due to hypertrophy and/or ischemia,alto_risco
+qrs changes v3/v4 may be due to lvh but cannot rule out anterior infarct,alto_risco
+"inferior infarct, old",alto_risco
+extensive infarct - age undetermined,alto_risco
+possible lateral infarct - age undetermined,alto_risco
+right ventricular hypertrophy,alto_risco
+lateral infarct - age undetermined,alto_risco
+anterolateral st-t changes may be due to myocardial ischemia,alto_risco
+probable left ventricular hypertrophy,alto_risco
+left ventricular hypertrophy by voltage only,alto_risco
+"inferior st elevation, consider acute infarct",alto_risco
+"lateral st elevation, consider acute infarct",alto_risco
+anterior infarct - age undetermined,alto_risco
+anterolateral st-t changes may be due to hypertrophy and/or ischemia,alto_risco
+"anterior infarct, old",alto_risco
+extensive t wave changes may be due to myocardial ischemia,alto_risco
+tall t waves - consider acute ischemia or hyperkalemia,alto_risco
+possible right ventricular hypertrophy,alto_risco
+anterolateral t wave changes may be due to myocardial ischemia,alto_risco
+"anteroseptal st elevation, consider acute infarct",alto_risco
+ant/septal and lateral st-t changes may be due to myocardial ischemia,alto_risco
+possible extensive infarct - age undetermined,alto_risco
+extensive st-t changes suggest myocardial injury/ischemia,alto_risco
+inferior/lateral t wave changes may be due to myocardial ischemia,alto_risco
+cannot rule out septal infarct - age undetermined,alto_risco
+consider left ventricular hypertrophy,alto_risco
+poor r wave progression - cannot rule out anteroseptal infarct,alto_risco
+"anteroseptal infarct, old",alto_risco
+"anterior q waves, possibly due to lvh",alto_risco
+inferior/lateral st-t changes suggest myocardial injury/ischemia,alto_risco
+"probable anteroseptal infarct, old",alto_risco
+cannot rule out anteroseptal infarct - age undetermined,alto_risco
+sinus rhythm,baixo_risco
+normal ecg,baixo_risco
+left axis deviation,baixo_risco
+sinus bradycardia,baixo_risco
+sinus tachycardia,baixo_risco
+poor r wave progression - probable normal variant,baixo_risco
+normal ecg except for rate,baixo_risco
+right bundle branch block,baixo_risco
+leftward axis,baixo_risco
+rsr'(v1) - probable normal variant,baixo_risco
+sinus rhythm with borderline 1st degree a-v block,baixo_risco
+sinus rhythm with 1st degree a-v block,baixo_risco
+sinus arrhythmia,baixo_risco
+sinus rhythm with pac(s),baixo_risco
+rightward axis,baixo_risco
+sinus rhythm with pvc(s),baixo_risco
+sinus bradycardia with 1st degree a-v block,baixo_risco
+right axis deviation,baixo_risco
+sinus bradycardia with borderline 1st degree a-v block,baixo_risco
+sinus bradycardia with sinus arrhythmia,baixo_risco
+sinus rhythm with pacs,baixo_risco
+sinus rhythm with pvcs,baixo_risco
+sinus bradycardia with pac(s),baixo_risco
+sinus tachycardia with pac(s),baixo_risco
+normal ecg based on available leads,baixo_risco
+sinus tachycardia with sinus arrhythmia,baixo_risco
+sinus tachycardia with pacs,baixo_risco
+sinus rhythm with pvc(s) with pac(s),baixo_risco
+sinus tachycardia with pvc(s),baixo_risco
+sinus tachycardia with borderline 1st degree a-v block,baixo_risco
+sinus bradycardia with pvc(s),baixo_risco
+sinus rhythm with pac(s) with 1st degree a-v block,baixo_risco
+sinus rhythm with pac(s) with borderline 1st degree a-v block,baixo_risco
+probable normal variant,baixo_risco
+sinus bradycardia with pacs,baixo_risco
+sinus rhythm with pvc(s) with 1st degree a-v block,baixo_risco
+sinus rhythm with pvc(s) with borderline 1st degree a-v block,baixo_risco
+ectopic atrial rhythm,baixo_risco
+poor r wave progression v2-v4,baixo_risco
+sinus tachycardia with pvcs,baixo_risco
+sinus rhythm with pvcs with pacs,baixo_risco
+sinus bradycardia with sinus arrhythmia with 1st degree a-v block,baixo_risco
+sinus bradycardia with sinus arrhythmia with borderline 1st degree a-v block,baixo_risco
+sinus tachycardia with pvc(s) with pac(s),baixo_risco
+sinus bradycardia with pac(s) with 1st degree a-v block,baixo_risco
+sinus tachycardia with frequent pvcs,baixo_risco
+sinus bradycardia with pvcs,baixo_risco
+junctional rhythm,baixo_risco
+sinus rhythm with pacs with 1st degree a-v block,baixo_risco
+sinus rhythm with pvcs with 1st degree a-v block,baixo_risco
