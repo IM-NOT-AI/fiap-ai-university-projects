@@ -1,0 +1,29 @@
+1. Pacientes com IAMCSST com menos de 12 horas do início dos sintomas devem receber terapia trombolítica imediatamente (dentro de 30 min.), quando a ICP primária não pode ser realizada dentro de 90 minutos da admissão.
+   [Diagnóstico: Síndrome coronariana aguda - protocolo hospitalar SUS | Superclasse: MI | Risco: alto]
+
+2. INFARTO AGUDO DO MIOCÁRDIO ADMINISTRAÇÃO ACELERADA (até 6 horas após o início dos sintomas) Em pacientes com peso corpóreo ≥65 kg DOSE TOTAL: 100 mg em 90 min ACTILYSE PROFISSIONAL abcd ACTILYSE_Bula Profissional 20120904/ I13-00 9 1-2 minutos 15 mg Retirar 15 ml (15 mg) da solução de ACTILYSE do primeiro frasco de 50 mg, utilizando seringa estéril.
+   [Diagnóstico: Trombólise no infarto agudo do miocárdio (alteplase) | Superclasse: MI | Risco: alto]
+
+3. Reações locais: podem ocorrer dor, hematomas e irritação local leve após a administração subcutânea de enoxaparina sódica.
+   [Diagnóstico: Anticoagulação no infarto e síndrome coronariana (enoxaparina) | Superclasse: MI | Risco: alto]
+
+4. I A Clopidogrel (300mg em dose de ataque, com manutenção de 75mg/dia) em adição ao AAS, em pacientes portadores de SCASSST de risco intermediário ou alto por 12 meses, em pacientes com risco muito alto de sangramento, em uso concomitante de anticoagulantes orais ou quando prasugrel ou ticagrelor não estiverem disponíveis.
+   [Diagnóstico: Angina instável e síndrome coronariana sem elevação do ST | Superclasse: STTC | Risco: alto]
+
+5. O fato de as causas secundárias terem sido proeminentes em nosso caso, de nenhuma patologia cardíaca óbvia que pudesse causar arritmia ter sido encontrada no exame detalhado e de a arritmia não ter recorrido durante a internação hospitalar, que durou até 15 dias, nos levou a acreditar que esse paciente poderia receber alta sem um cardioversor-desfibrilador implantável.
+   [Diagnóstico: Fibrilação ventricular por cardiotoxicidade ao 5-fluorouracil | Superclasse: STTC | Risco: alto]
+
+6. Apresenta-se com alterações eletrocardiográficas, aumento de biomarcadores cardíacos e achados ecocardiográficos típicos.2,3 Neste artigo, descrevemos uma paciente com TTC que havia sido previamente submetida ao TAVI e, posteriormente, ao implante de cardioversor-desfibrilador implantável (CDI).
+   [Diagnóstico: Síndrome de Takotsubo - cardiomiopatia de estresse | Superclasse: STTC | Risco: alto]
+
+7. I B Prasugrel 60mg de ataque seguidos por 10mg ao dia em pacientes portadores de SCASSST de risco moderado ou alto, com anatomia coronariana conhecida, tratados com ICP e sem fatores de risco para sangramento (idade ≥ 75 anos;
+   [Diagnóstico: Angina instável e síndrome coronariana sem elevação do ST | Superclasse: STTC | Risco: alto]
+
+8. Este relato de caso descreve a implantação bem-sucedida de um dispositivo de assistência ventricular esquerda de fluxo axial em paciente com insuficiência cardíaca terminal com insuficiência biventricular grave secundária à cardiomiopatia chagásica.
+   [Diagnóstico: Cardiomiopatia de Chagas com suporte circulatório mecânico | Superclasse: CD | Risco: alto]
+
+9. Se o volume plasmático não é corrigido, a hipotensão pode recidivar quando Epikabi® (hemitartarato de norepinefrina) for descontinuado, ou a pressão sanguínea pode ser mantida ao risco de severa vasoconstrição periférica e visceral (por exemplo, perfusão renal diminuída) com diminuição no fluxo e na perfusão sanguínea tissulares com subsequente hipóxia tissular e acidose láctica e provável lesão isquêmica.
+   [Diagnóstico: Choque cardiogênico e vasopressão (noradrenalina) | Superclasse: CD | Risco: alto]
+
+10. 113(3):449-663 Quadro 5.5 – Orientação para desfibrilação Recomendação Classe de Recomendação Nível de Evidência Choque bifásico seguindo as recomendações do fabricante I B Choque bifásico com carga máxima, se desconhecidas as orientações do fabricante IIb C Realizar RCP enquanto se prepara a desfibrilação I B Atrasar desfibrilação para realizar RCP por 2 minutos IIb B RCP: ressuscitação cardiopulmonar.
+   [Diagnóstico: Ressuscitação cardiopulmonar e parada cardiorrespiratória | Superclasse: CD | Risco: alto]
