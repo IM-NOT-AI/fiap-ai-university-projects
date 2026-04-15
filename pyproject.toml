@@ -7,9 +7,10 @@
 #   cpu  → Python 3.12, sem CUDA    → pip install -e ".[cpu]"
 #
 # CONTEXTO:
-#   tensorflow-gpu==2.10.0 é o último release com suporte nativo a GPU no
+#   tensorflow-gpu==2.10.0 e o ultimo release com suporte nativo a GPU no
 #   Windows sem WSL2. Por isso o venv gpu exige Python 3.10 estritamente.
-#   tensorflow==2.20.0 (cpu) funciona em Python 3.12 sem CUDA.
+#   tensorflow-cpu==2.18.0 (cpu) e o build estavel para Python 3.12 no Windows.
+#   tensorflow 2.20 falha com DLL initialization error no Windows.
 # =============================================================================
 
 [build-system]
@@ -96,11 +97,13 @@ gpu = [
 ]
 
 # pip install -e ".[cpu]"
-# Python 3.12+ sem CUDA - TF moderno (Keras 3.x)
+# Python 3.12+ sem CUDA - tensorflow-cpu 2.18 (Keras 3.x)
+# tensorflow 2.20 falha no Windows com DLL initialization error;
+# tensorflow-cpu 2.18 e o build estavel para Python 3.12 no Windows.
 cpu = [
-    "tensorflow>=2.20.0",
+    "tensorflow-cpu==2.18.0",
     "keras>=3.13.2",
-    "tensorboard>=2.20.0",
+    "tensorboard==2.18.0",
 ]
 
 # pip install -e ".[dev]"

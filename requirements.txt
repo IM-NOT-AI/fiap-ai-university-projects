@@ -6,13 +6,19 @@
 #   pip install -r requirements.txt
 #
 # CONTEXTO:
-#   Ambiente padrão para desenvolvimento e execução dos notebooks em máquinas
-#   sem GPU NVIDIA ou com Python 3.12+. Usa tensorflow 2.20 (Keras 3.x).
-#   Versões pinadas do pip freeze do venv .fiap_venv_py312.
+#   Ambiente padrao para desenvolvimento e execucao dos notebooks em maquinas
+#   sem GPU NVIDIA ou com Python 3.12+. Usa tensorflow-cpu 2.18 (Keras 3.x).
+#   Versoes pinadas do pip freeze do venv .fiap_venv_py312.
+#
+# NOTA tensorflow-cpu vs tensorflow:
+#   tensorflow==2.20.0 falha no Windows 10/11 com DLL initialization error
+#   mesmo com MSVC instalado. tensorflow-cpu==2.18.0 resolve o problema -
+#   build CPU-only com dependencias de DLL mais simples. Funcionalidade
+#   identica para todos os notebooks (NB3, NB8) que nao usam GPU.
 # =============================================================================
 
 # --- Data Science Core ---
-numpy==2.4.2
+numpy==1.26.4
 pandas==3.0.0
 matplotlib==3.10.8
 seaborn==0.13.2
@@ -26,12 +32,13 @@ wfdb==4.3.1
 # --- NLP / PDF (NB4 - nlp_data_pruning, NB5 - nlp_data_engineer) ---
 PyPDF2==3.0.1
 PyMuPDF==1.27.1
-nltk==3.9.2
+nltk==3.9.3
 
-# --- Deep Learning - CPU (NB3 - ptbxl_signal_vision_eda) ---
-tensorflow==2.20.0
+# --- Deep Learning - CPU (NB3, NB8) ---
+# tensorflow-cpu: build sem CUDA, resolve DLL error no Windows com Python 3.12
+tensorflow-cpu==2.18.0
 keras==3.13.2
-tensorboard==2.20.0
+tensorboard==2.18.0
 
 # --- Jupyter / Reprodutibilidade ---
 ipykernel==7.2.0
