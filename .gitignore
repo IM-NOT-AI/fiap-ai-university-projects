@@ -85,6 +85,7 @@ challenge/ai_cardiology/data/raw/mimic-iv/
 # Ponteiro Git: challenge/ai_cardiology/data/raw/heartbeat.dvc
 # =============================================================================
 challenge/ai_cardiology/data/raw/heartbeat/
+!challenge/ai_cardiology/data/raw/heartbeat/.gitkeep
 
 
 # =============================================================================
